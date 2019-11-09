@@ -1,0 +1,27 @@
+{
+  "dashBoardData": [
+    {
+      "id":1,
+      "name":"Ruqyah"
+    } ,
+    {
+      "id":2,
+      "name":"Dua"
+    } , {
+      "id":3,
+      "name":"Ayte Shifa"
+    } , {
+      "id":4,
+      "name":"Azkar"
+    } , {
+      "id":5,
+      "name":"Adhan"
+    } , {
+      "id":6,
+      "name":"Symptoms"
+    } , {
+      "id":7,
+      "name":"99 Names"
+    }
+  ]
+}

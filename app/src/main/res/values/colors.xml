@@ -5,9 +5,12 @@
     <color name="colorPrimary1">#0044cc</color>
     <color name="colorPrimaryDark2">#003399</color>
     <color name="blue">#2196F3</color>
+    <color name="black">#000000</color>
+    <color name="green">#469E4A</color>
     <color name="navy_blue">#000080</color>
     <color name="lightwhite">#f2f2f2</color>
     <color name="white">#ffffff</color>
+    <color name="lesswhite">#e6e6e6</color>
     <color name="slightWhitener">#e6e6e6</color>
     <color name="grey">#d9d9d9</color>
     <color name="dark_grey">#999999</color>

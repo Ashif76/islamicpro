@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.idcmedia.islamicpro.activity.DashBoardHomeActivity;
+
 
 public class SplashScreen extends Activity {
  
@@ -32,7 +34,7 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
 
-                    Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent i = new Intent(SplashScreen.this, DashBoardHomeActivity.class);
                     startActivity(i);
 
                 // close this activity

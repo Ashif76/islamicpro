@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_temp);
         rlDua = findViewById(R.id.rlDua);
         llAzkar = findViewById(R.id.ll_azkar);
         llAdhan = findViewById(R.id.ll_adhan);

@@ -1,3 +1,36 @@
 <resources>
+    <dimen name="marpad4">4dp</dimen>
+    <dimen name="marpad5">5dp</dimen>
+    <dimen name="marpa6">6dp</dimen>
+    <dimen name="marpad7">7dp</dimen>
+    <dimen name="marpad8">8dp</dimen>
+    <dimen name="marpad9">9dp</dimen>
+    <dimen name="marpad10">10dp</dimen>
+    <dimen name="marpad11">11dp</dimen>
+    <dimen name="marpad12">12dp</dimen>
+    <dimen name="marpad13">13dp</dimen>
+    <dimen name="marpad14">14dp</dimen>
+    <dimen name="marpad15">15dp</dimen>
+    <dimen name="marpad16">16dp</dimen>
+    <dimen name="width_height30">30dp</dimen>
+    <dimen name="width_height40">40dp</dimen>
+    <dimen name="width_height50">50dp</dimen>
+    <dimen name="width_height60">60dp</dimen>
+    <dimen name="width_height70">70dp</dimen>
+    <dimen name="width_height80">80dp</dimen>
+    <dimen name="textsize12sp">12sp</dimen>
+    <dimen name="textsize13sp">13sp</dimen>
+    <dimen name="textsize14sp">14sp</dimen>
+    <dimen name="textsize15sp">15sp</dimen>
+    <dimen name="textsize16sp">16sp</dimen>
+    <dimen name="textsize17sp">17sp</dimen>
+    <dimen name="textsize18sp">18sp</dimen>
+    <dimen name="textsize19sp">19sp</dimen>
+    <dimen name="textsize25sp">25sp</dimen>
+    <dimen name="textsize30sp">30sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 </resources>
