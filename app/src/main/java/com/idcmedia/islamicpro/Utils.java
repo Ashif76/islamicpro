@@ -38,6 +38,12 @@ public class Utils  {
     public static final String SYMPTOMS_KEY = "SYMTOMS";
     public static final String NAMES99_KEY = "ALLAH 99 NAMES";
 
+    public static final String SURAH_POSITION_KEY = "surah_position";
+    public static final String AYAT_POSITION_KEY = "ayat_position";
+    public static final String YOUTUBE_API_KEY = "AIzaSyCSP-4CfseY2oPhFoInQ-xpnUxn2wObzQ0";
+
+
+
 
     public static void loadAdd(AdView adView){
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -91,16 +97,29 @@ public class Utils  {
         }
     }
 
-    public static void setSharedPref(Context context , String key, int value){
+    public static void setIntSharedPref(Context context , String key, int value){
         SharedPreferences.Editor editor = context.getSharedPreferences(KEY_SHARED_PREF, MODE_PRIVATE).edit();
         editor.putInt(key, value);
         editor.apply();
     }
 
 
-    public static int getSharedPref(Context context, String key){
+    public static int getIntSharedPref(Context context, String key){
         SharedPreferences sharedPref = context.getSharedPreferences(KEY_SHARED_PREF, Context.MODE_PRIVATE);
         int value = sharedPref.getInt(key,0);
+        return  value;
+    }
+
+    public static void setBooleanSharedPref(Context context , String key, boolean value){
+        SharedPreferences.Editor editor = context.getSharedPreferences(KEY_SHARED_PREF, MODE_PRIVATE).edit();
+        editor.putBoolean(key, value);
+        editor.apply();
+    }
+
+
+    public static boolean getBooleanSharedPref(Context context, String key){
+        SharedPreferences sharedPref = context.getSharedPreferences(KEY_SHARED_PREF, Context.MODE_PRIVATE);
+        boolean value = sharedPref.getBoolean(key,true);
         return  value;
     }
 

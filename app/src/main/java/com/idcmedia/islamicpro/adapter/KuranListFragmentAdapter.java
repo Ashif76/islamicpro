@@ -1,14 +1,20 @@
 package com.idcmedia.islamicpro.adapter;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
+import com.idcmedia.islamicpro.Utils;
 import com.idcmedia.islamicpro.model.DuaStubs;
+import com.idcmedia.islamicpro.model.ItemClickListener;
+import com.idcmedia.islamicpro.model.KuranSurahData;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,10 +26,12 @@ import androidx.recyclerview.widget.RecyclerView;
  */
 public class KuranListFragmentAdapter extends RecyclerView.Adapter<KuranListFragmentAdapter.ViewHolder> {
 
-    private final List<DuaStubs> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private Context context;
+    private final ArrayList<KuranSurahData> mValues;
+    private final ItemClickListener mListener;
 
-    public KuranListFragmentAdapter(List<DuaStubs> items, OnListFragmentInteractionListener listener) {
+    public KuranListFragmentAdapter(Context context, ArrayList<KuranSurahData> items, ItemClickListener listener) {
+        this.context = context;
         mValues = items;
         mListener = listener;
     }
@@ -38,9 +46,16 @@ public class KuranListFragmentAdapter extends RecyclerView.Adapter<KuranListFrag
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvArabic.setText(mValues.get(position).textArabic);
-        holder.mTvExplanation.setText(mValues.get(position).textExplanation);
-        holder.mTvTranslation.setText(mValues.get(position).textTranslation);
+        holder.mTvArabic.setText(mValues.get(position).getSurahNameInArabic());
+        holder.mTvExplanation.setText(mValues.get(position).getEnglishNameTranslation());
+        holder.mTvTranslation.setText(mValues.get(position).getEnglishName());
+        holder.mTvSurahNo.setText((position+1)+".");
+        int surahPosition = Utils.getIntSharedPref(context, Utils.SURAH_POSITION_KEY);
+        if (surahPosition ==position ) {
+           holder.tvReadingStatus.setVisibility(View.VISIBLE);
+        }else{
+            holder.tvReadingStatus.setVisibility(View.GONE);
+        }
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +63,7 @@ public class KuranListFragmentAdapter extends RecyclerView.Adapter<KuranListFrag
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onItemClick(holder.mItem);
                 }
             }
         });
@@ -64,7 +79,9 @@ public class KuranListFragmentAdapter extends RecyclerView.Adapter<KuranListFrag
         public final TextView mTvArabic;
         public final TextView mTvTranslation;
         public final TextView mTvExplanation;
-        public DuaStubs mItem;
+        public final TextView mTvSurahNo;
+        public KuranSurahData mItem;
+        public TextView tvReadingStatus;
 
         public ViewHolder(View view) {
             super(view);
@@ -72,6 +89,8 @@ public class KuranListFragmentAdapter extends RecyclerView.Adapter<KuranListFrag
             mTvArabic = (TextView) view.findViewById(R.id.tv_arabic);
             mTvTranslation = (TextView) view.findViewById(R.id.tv_translation);
             mTvExplanation = (TextView) view.findViewById(R.id.tv_exmplanation);
+            mTvSurahNo = (TextView)view.findViewById(R.id.tv_surah_no);
+            tvReadingStatus = view.findViewById(R.id.tv_reading_status);
         }
 
     }

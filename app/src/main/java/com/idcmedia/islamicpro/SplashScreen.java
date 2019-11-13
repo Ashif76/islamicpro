@@ -17,13 +17,13 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Utils.setSharedPref(this, Utils.DUA_KEY,0);
-        Utils.setSharedPref(this, Utils.RUKYAH_KEY,0);
-        Utils.setSharedPref(this, Utils.AZKAR_KEY,0);
-        Utils.setSharedPref(this, Utils.NAMES99_KEY,0);
-        Utils.setSharedPref(this, Utils.AYTE_SHIFA_KEY,0);
-        Utils.setSharedPref(this, Utils.SYMPTOMS_KEY,0);
-        Utils.setSharedPref(this, Utils.ADHAN_KEY,0);
+        Utils.setIntSharedPref(this, Utils.DUA_KEY,0);
+        Utils.setIntSharedPref(this, Utils.RUKYAH_KEY,0);
+        Utils.setIntSharedPref(this, Utils.AZKAR_KEY,0);
+        Utils.setIntSharedPref(this, Utils.NAMES99_KEY,0);
+        Utils.setIntSharedPref(this, Utils.AYTE_SHIFA_KEY,0);
+        Utils.setIntSharedPref(this, Utils.SYMPTOMS_KEY,0);
+        Utils.setIntSharedPref(this, Utils.ADHAN_KEY,0);
         new Handler().postDelayed(new Runnable() {
  
             /*

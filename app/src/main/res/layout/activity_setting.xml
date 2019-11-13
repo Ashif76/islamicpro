@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:id="@+id/rl_kuran_translation_setting"
+        android:padding="@dimen/marpad8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kuran Translation."
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize14sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:id="@+id/sw_kuran"
+            android:switchMinWidth="60dp"
+            android:switchPadding="@dimen/marpad5"
+            android:text="Enabled:"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:thumbTint="@color/white"
+            app:trackTint="@drawable/switch_checker" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dark_grey"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/white"
+        android:id="@+id/rl_dua_translation_setting"
+        android:padding="@dimen/marpad8"
+        android:layout_height="60dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize14sp"
+            android:text="Dua Translation."/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enabled:"
+            android:layout_alignParentRight="true"
+            android:checked="true"
+            android:id="@+id/sw_dua"
+            android:switchPadding="@dimen/marpad5"
+            android:textOff="OFF"
+            android:textOn="ON"
+            app:thumbTint="@color/white"
+            app:trackTint="@drawable/switch_checker"
+            android:switchMinWidth="60dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

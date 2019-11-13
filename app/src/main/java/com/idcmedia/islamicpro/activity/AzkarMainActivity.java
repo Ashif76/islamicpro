@@ -6,6 +6,7 @@ import android.view.MenuItem;
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.fragment.AzkarViewPagerFragment;
 import com.idcmedia.islamicpro.fragment.RukyahViewPagerFragment;
+import com.idcmedia.islamicpro.fragment.YouTubeFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -20,7 +21,7 @@ public class AzkarMainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         if (savedInstanceState == null) {
-            Fragment newFragment = AzkarViewPagerFragment.newInstance("","");
+            Fragment newFragment = YouTubeFragment.newInstance("","");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.ll_rukyah_main, newFragment).commit();
         }

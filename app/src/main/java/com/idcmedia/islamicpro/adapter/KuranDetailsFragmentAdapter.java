@@ -1,16 +1,24 @@
 package com.idcmedia.islamicpro.adapter;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.idcmedia.islamicpro.R;
-import com.idcmedia.islamicpro.model.DuaStubs;
+import com.idcmedia.islamicpro.Utils;
+import com.idcmedia.islamicpro.model.ItemClickListener;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
+import com.idcmedia.islamicpro.model.SurahVerse;
 
-import java.util.List;
+import java.util.ArrayList;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
@@ -18,12 +26,17 @@ import androidx.recyclerview.widget.RecyclerView;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class KuranDetailsFragmentAdapter extends RecyclerView.Adapter<KuranDetailsFragmentAdapter.ViewHolder> {
+public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDetailsFragmentAdapter.ViewHolder> {
+    private Context context;
+    private int mSurahNumber;
+    private boolean kuranTransState;
+    private final ArrayList<SurahVerse> mValues;
+    private final ItemClickListener mListener;
 
-    private final List<DuaStubs> mValues;
-    private final OnListFragmentInteractionListener mListener;
-
-    public KuranDetailsFragmentAdapter(List<DuaStubs> items, OnListFragmentInteractionListener listener) {
+    public KuranDetailsFragmentAdapter(Context context, int number, boolean kuranTransState, ArrayList<SurahVerse> items, ItemClickListener listener) {
+        this.context = context;
+        mSurahNumber = number-1;
+        this.kuranTransState = kuranTransState;
         mValues = items;
         mListener = listener;
     }
@@ -38,17 +51,36 @@ public class KuranDetailsFragmentAdapter extends RecyclerView.Adapter<KuranDetai
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvArabic.setText(mValues.get(position).textArabic);
-        holder.mTvExplanation.setText(mValues.get(position).textExplanation);
-        holder.mTvTranslation.setText(mValues.get(position).textTranslation);
+        holder.mTvArabic.setText(mValues.get(position).getVerseArabicText());
+        holder.mTvExplanation.setText(mValues.get(position).getEnglishTranslation());
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        holder.mTvTranslation.setText(position+1+". "+mValues.get(position).getEnglishTranslation());
+        if (kuranTransState){
+            holder.mTvTranslation.setVisibility(View.VISIBLE);
+        }else{
+            holder.mTvTranslation.setVisibility(View.GONE);
+        }
+        int surahPosition = Utils.getIntSharedPref(context, Utils.SURAH_POSITION_KEY);
+        int intAyatPosition = Utils.getIntSharedPref(context, Utils.AYAT_POSITION_KEY);
+        if (intAyatPosition!=0 && intAyatPosition == position && surahPosition ==mSurahNumber ) {
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#999999"));
+        }else{
+            holder.cardView.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+        }
+
+
+        holder.ivResumeSurahPosition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
+
+                    Utils.setIntSharedPref(context,Utils.SURAH_POSITION_KEY, mSurahNumber);
+                    Utils.setIntSharedPref(context,Utils.AYAT_POSITION_KEY,position);
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    Toast.makeText(context,"Verse has been saved. You can resume your reading from here later.",Toast.LENGTH_LONG).show();
+                    notifyDataSetChanged();
+                    mListener.onItemClick(holder.mItem);
                 }
             }
         });
@@ -64,12 +96,16 @@ public class KuranDetailsFragmentAdapter extends RecyclerView.Adapter<KuranDetai
         public final TextView mTvArabic;
         public final TextView mTvTranslation;
         public final TextView mTvExplanation;
-        public DuaStubs mItem;
+        public SurahVerse mItem;
+        public ImageView ivResumeSurahPosition;
+        public CardView cardView;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
             mTvArabic = (TextView) view.findViewById(R.id.tv_ayat);
+            cardView = view.findViewById(R.id.card_view);
+            ivResumeSurahPosition = view.findViewById(R.id.iv_save_position);
             mTvTranslation = (TextView) view.findViewById(R.id.tv_translation);
             mTvExplanation = (TextView) view.findViewById(R.id.tv_exmplanation);
         }

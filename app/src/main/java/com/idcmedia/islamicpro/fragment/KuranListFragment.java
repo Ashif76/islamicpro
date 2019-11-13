@@ -5,12 +5,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.Utils;
 import com.idcmedia.islamicpro.adapter.KuranListFragmentAdapter;
 import com.idcmedia.islamicpro.model.DuaStubs;
+import com.idcmedia.islamicpro.model.ItemClickListener;
+import com.idcmedia.islamicpro.model.KuranSurahData;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
+import com.idcmedia.islamicpro.utils.JsonConvertUtil;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,7 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class KuranListFragment extends Fragment implements OnListFragmentInteractionListener {
+public class KuranListFragment extends Fragment implements ItemClickListener<KuranSurahData> {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -73,7 +77,12 @@ public class KuranListFragment extends Fragment implements OnListFragmentInterac
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
-            recyclerView.setAdapter(new KuranListFragmentAdapter(Utils.dummyData(), this));
+            recyclerView.setAdapter(new KuranListFragmentAdapter(getContext(),JsonConvertUtil.getKuranSurahList(getContext()), this));
+
+        int surahPosition = Utils.getIntSharedPref(context, Utils.SURAH_POSITION_KEY);
+        if (surahPosition!=0){
+            recyclerView.scrollToPosition(surahPosition);
+        }
         return view;
     }
 
@@ -90,13 +99,11 @@ public class KuranListFragment extends Fragment implements OnListFragmentInterac
         mListener = null;
     }
 
-    @Override
-    public void onListFragmentInteraction(DuaStubs item) {
-//        Fragment newFragment = KuranDetailsFragment.newInstance(1);
-//        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//        ft.replace(R.id.ll_rukyah_main, newFragment).commit();
 
-        Fragment newFragment = KuranDetailsFragment.newInstance(1);
+
+    @Override
+    public void onItemClick(KuranSurahData kuranSurahData) {
+        Fragment newFragment = KuranDetailsFragment.newInstance(1,kuranSurahData);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.ll_rukyah_main, newFragment,"KuranListFragment");
         ft.addToBackStack("null");

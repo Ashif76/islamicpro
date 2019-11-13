@@ -113,40 +113,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (id){
 
             case R.id.rlRukyah:{
-                int value = Utils.getSharedPref(this, Utils.RUKYAH_KEY);
-                Utils.setSharedPref(this, Utils.RUKYAH_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.RUKYAH_KEY);
+                Utils.setIntSharedPref(this, Utils.RUKYAH_KEY,value+1);
                 Intent intent = new Intent(MainActivity.this, RuqyahActivity.class);
                 startActivityForResult(intent,REQUEST_CODE);
                 break;
             }
             case R.id.rlDua:{
-                int value = Utils.getSharedPref(this, Utils.DUA_KEY);
-                Utils.setSharedPref(this, Utils.DUA_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.DUA_KEY);
+                Utils.setIntSharedPref(this, Utils.DUA_KEY,value+1);
                 startActivityIntent("dua.pdf", Utils.DUA_KEY);
                 break;
             }
             case R.id.ll_adhan:{
-                int value = Utils.getSharedPref(this, Utils.ADHAN_KEY);
-                Utils.setSharedPref(this, Utils.ADHAN_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.ADHAN_KEY);
+                Utils.setIntSharedPref(this, Utils.ADHAN_KEY,value+1);
                 startActivityIntent("adhan.pdf", Utils.ADHAN_KEY);
                 break;
             }
             case R.id.ll_ayte_shifa:{
-                int value = Utils.getSharedPref(this, Utils.AYTE_SHIFA_KEY);
-                Utils.setSharedPref(this, Utils.AYTE_SHIFA_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.AYTE_SHIFA_KEY);
+                Utils.setIntSharedPref(this, Utils.AYTE_SHIFA_KEY,value+1);
                 startActivityIntent("aytesh.pdf", Utils.AYTE_SHIFA_KEY);
                 break;
             }
             case R.id.ll_azkar:{
-                int value = Utils.getSharedPref(this, Utils.AZKAR_KEY);
-                Utils.setSharedPref(this, Utils.AZKAR_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.AZKAR_KEY);
+                Utils.setIntSharedPref(this, Utils.AZKAR_KEY,value+1);
                 Intent intent = new Intent(MainActivity.this, AzkarActivity.class);
                 startActivityForResult(intent,REQUEST_CODE);
                 break;
             }
             case R.id.ll_symptoms:{
-                int value = Utils.getSharedPref(this, Utils.SYMPTOMS_KEY);
-                Utils.setSharedPref(this, Utils.SYMPTOMS_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.SYMPTOMS_KEY);
+                Utils.setIntSharedPref(this, Utils.SYMPTOMS_KEY,value+1);
                 startActivityIntent("symptoms.pdf", Utils.SYMPTOMS_KEY);
                 break;
             }
@@ -157,8 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case R.id.ll_99_names:{
-                int value = Utils.getSharedPref(this, Utils.NAMES99_KEY);
-                Utils.setSharedPref(this, Utils.NAMES99_KEY,value+1);
+                int value = Utils.getIntSharedPref(this, Utils.NAMES99_KEY);
+                Utils.setIntSharedPref(this, Utils.NAMES99_KEY,value+1);
                 startActivityIntent("99names.pdf", Utils.NAMES99_KEY);
                 break;
             }
@@ -181,13 +181,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Utils.setSharedPref(this, Utils.DUA_KEY,0);
-        Utils.setSharedPref(this, Utils.RUKYAH_KEY,0);
-        Utils.setSharedPref(this, Utils.AZKAR_KEY,0);
-        Utils.setSharedPref(this, Utils.NAMES99_KEY,0);
-        Utils.setSharedPref(this, Utils.AYTE_SHIFA_KEY,0);
-        Utils.setSharedPref(this, Utils.SYMPTOMS_KEY,0);
-        Utils.setSharedPref(this, Utils.ADHAN_KEY,0);
+        Utils.setIntSharedPref(this, Utils.DUA_KEY,0);
+        Utils.setIntSharedPref(this, Utils.RUKYAH_KEY,0);
+        Utils.setIntSharedPref(this, Utils.AZKAR_KEY,0);
+        Utils.setIntSharedPref(this, Utils.NAMES99_KEY,0);
+        Utils.setIntSharedPref(this, Utils.AYTE_SHIFA_KEY,0);
+        Utils.setIntSharedPref(this, Utils.SYMPTOMS_KEY,0);
+        Utils.setIntSharedPref(this, Utils.ADHAN_KEY,0);
     }
 
     private void fullScreenListener() {

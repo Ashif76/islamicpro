@@ -2,7 +2,11 @@
 <LinearLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+       <include layout="@layout/header_surah_ayat"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

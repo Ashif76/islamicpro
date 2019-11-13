@@ -27,12 +27,15 @@
         </activity>
         <activity android:name="com.idcmedia.islamicpro.PdfRenderActivity" />
         <activity android:name="com.idcmedia.islamicpro.AzkarActivity" />
-        <activity android:name="com.idcmedia.islamicpro.activity.DashBoardDuaActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.DashBoardDuaMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.RukyahMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.AzkarMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.KuranMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.CommonDetailsMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.CommonListMainActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.SettingActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.YouVideoPlayActivity"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name=".activity.DashBoardHomeActivity"
             android:label="@string/name_activity_home"

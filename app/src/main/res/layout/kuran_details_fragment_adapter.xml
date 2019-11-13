@@ -9,8 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="10dp"
+
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -18,22 +25,28 @@
             android:padding="8dp"
             android:orientation="vertical">
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textDirection="anyRtl"
                 android:layout_gravity="right"
                 android:gravity="right"
-                android:textSize="@dimen/textsize25sp"
+                android:lineSpacingExtra="20dp"
+                android:letterSpacing="0.0"
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize30sp"
                 android:id="@+id/tv_ayat"
-                android:textColor="@color/blue"
+                android:textColor="@color/black"
                 android:text="لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/green"
+                android:textColor="@color/blue"
                 android:id="@+id/tv_translation"
+                android:textSize="@dimen/marpad16"
+                android:textStyle="italic"
                 android:layout_marginTop="@dimen/marpad8"
                 android:text="translation" />
 
@@ -42,29 +55,43 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/dark_grey"
                 android:layout_marginTop="@dimen/marpad8"
+                android:visibility="gone"
                 android:id="@+id/tv_exmplanation"
                 android:text="exmplanation" />
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marpad8"
+                android:background="@color/black"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="@dimen/marpad8"
+                android:padding="@dimen/marpad8"
                 android:id="@+id/ll_action">
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/marpad4"
+                    android:id="@+id/iv_save_position"
+                    android:src="@drawable/ic_menu_send"/>
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marpad16"
+                    android:padding="@dimen/marpad4"
+                    android:src="@drawable/ic_menu_manage"/>
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="40dp"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marpad16"
+                    android:padding="@dimen/marpad4"
+                    android:src="@drawable/ic_menu_share"/>
             </LinearLayout>
 
         </LinearLayout>

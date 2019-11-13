@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -151,6 +150,8 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this,SettingActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -174,7 +175,8 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
-
+            Intent intent = new Intent(this,SettingActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -187,7 +189,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         int id = item.getId();
         switch (id){
             case Utils.DUA_ID :{
-                Intent intent = new Intent(this,DashBoardDuaActivity.class);
+                Intent intent = new Intent(this, DashBoardDuaMainActivity.class);
                 startActivity(intent);
                 break;
             }

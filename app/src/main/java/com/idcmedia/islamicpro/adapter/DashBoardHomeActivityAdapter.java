@@ -8,7 +8,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
-import com.idcmedia.islamicpro.fragment.AllDuaFragment.OnListFragmentInteractionListener;
 import com.idcmedia.islamicpro.model.DashBoardData;
 import com.idcmedia.islamicpro.model.ItemClickListener;
 

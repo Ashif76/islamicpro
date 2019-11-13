@@ -97,9 +97,9 @@ public class CommonListFragment extends Fragment implements OnListFragmentIntera
 //        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
 //        ft.replace(R.id.ll_rukyah_main, newFragment).commit();
 
-        Fragment newFragment = KuranDetailsFragment.newInstance(1);
+        Fragment newFragment = CommonDetailsFragment.newInstance(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.ll_rukyah_main, newFragment,"KuranListFragment");
+        ft.replace(R.id.ll_rukyah_main, newFragment,"CommonDetailsFragment");
         ft.addToBackStack("null");
         ft.commit();
     }

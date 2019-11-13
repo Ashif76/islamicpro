@@ -69,7 +69,7 @@ public class PdfRenderActivity extends AppCompatActivity {
         mFileName = getIntent().getStringExtra(FILE_NAME);
         classType = getIntent().getStringExtra(CLASS_TYPE);
         if(classType !=null){
-            currentValueToShowAdd = Utils.getSharedPref(this, classType);
+            currentValueToShowAdd = Utils.getIntSharedPref(this, classType);
             getSupportActionBar().setTitle(classType);
         }
         MobileAds.initialize(this, getResources().getString(R.string.app_add_id));
