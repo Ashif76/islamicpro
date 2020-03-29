@@ -43,7 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue"
+                android:textColor="@color/green"
                 android:id="@+id/tv_translation"
                 android:textSize="@dimen/marpad16"
                 android:textStyle="italic"
@@ -53,9 +53,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/dark_grey"
+                android:textColor="@color/black"
                 android:layout_marginTop="@dimen/marpad8"
                 android:visibility="gone"
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/textsize16sp"
                 android:id="@+id/tv_exmplanation"
                 android:text="exmplanation" />
         </LinearLayout>

@@ -38,9 +38,9 @@ public class CommonListFragmentAdapter extends RecyclerView.Adapter<CommonListFr
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvArabic.setText(mValues.get(position).textArabic);
-        holder.mTvExplanation.setText(mValues.get(position).textExplanation);
-        holder.mTvTranslation.setText(mValues.get(position).textTranslation);
+        holder.mTvArabic.setText(mValues.get(position).getTextArabic());
+        holder.mTvExplanation.setText(mValues.get(position).getTextExplanation());
+        holder.mTvTranslation.setText(mValues.get(position).getRecite());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,13 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="10dp"
-        card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true">
+        card_view:cardElevation="1dp"
+        card_view:cardUseCompatPadding="true"
+        >
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:weightSum="2"
             android:orientation="horizontal">
 
@@ -29,6 +33,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:textColor="@color/black"
+
+                android:textSize="@dimen/textsize16sp"
+                android:id="@+id/tv_dua_no"
                 android:text="1."/>
         </LinearLayout>
 
@@ -36,12 +43,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginLeft="2dp"
                 android:layout_weight="1.9">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_arabic"
-                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize16sp"
+                    android:textColor="@color/green"
                     android:text="Surah Name" />
 
                 <TextView

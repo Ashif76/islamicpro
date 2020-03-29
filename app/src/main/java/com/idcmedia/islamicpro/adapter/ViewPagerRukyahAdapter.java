@@ -25,7 +25,15 @@ public class ViewPagerRukyahAdapter extends FragmentStatePagerAdapter {
  
     @Override
     public Fragment getItem(int position) {
-        RukyahPagerFragmentDetails tab1 = RukyahPagerFragmentDetails.newInstance(1);
+        String tabName = tabCount.get(position);
+        RukyahPagerFragmentDetails tab1;
+        if (tabName.equalsIgnoreCase("short")) {
+             tab1 = RukyahPagerFragmentDetails.newInstance(1,"short_rukyah.json");
+        }else  if (tabName.equalsIgnoreCase("long")) {
+            tab1 = RukyahPagerFragmentDetails.newInstance(1,"short_rukyah.json");
+        }else  {
+            tab1 = RukyahPagerFragmentDetails.newInstance(1,"complete_rukyah.json");
+        }
                 return tab1;
     }
  

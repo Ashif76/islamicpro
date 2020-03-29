@@ -1,9 +1,24 @@
 package com.idcmedia.islamicpro.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class DuaStubs {
-    public String textArabic;
-    public String textExplanation;
-    public String textTranslation;
+    @SerializedName("arabic_text")
+    private String textArabic;
+    @SerializedName("english_transaltion")
+    private String textExplanation;
+    @SerializedName("Verse")
+    private String verse;
+    @SerializedName("Recite")
+    private String recite;
+
+    public String getRecite() {
+        return recite;
+    }
+
+    public void setRecite(String recite) {
+        this.recite = recite;
+    }
 
     public String getTextArabic() {
         return textArabic;
@@ -21,11 +36,11 @@ public class DuaStubs {
         this.textExplanation = textExplanation;
     }
 
-    public String getTextTranslation() {
-        return textTranslation;
+    public String getVerse() {
+        return verse;
     }
 
-    public void setTextTranslation(String textTranslation) {
-        this.textTranslation = textTranslation;
+    public void setVerse(String verse) {
+        this.verse = verse;
     }
 }

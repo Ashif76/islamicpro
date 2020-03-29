@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
+import com.idcmedia.islamicpro.model.CommonDuaContent;
 import com.idcmedia.islamicpro.model.DuaStubs;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 
@@ -18,12 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDetailsFragmentAdapter.ViewHolder> {
+public class NotificationListFragmentAdapter extends RecyclerView.Adapter<NotificationListFragmentAdapter.ViewHolder> {
 
-    private final List<DuaStubs> mValues;
+    private final List<CommonDuaContent> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public CommonDetailsFragmentAdapter(List<DuaStubs> items, OnListFragmentInteractionListener listener) {
+    public NotificationListFragmentAdapter(List<CommonDuaContent> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -31,16 +32,18 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.common_details_fragment_adapter, parent, false);
+                .inflate(R.layout.noti_list_fragment_adapter, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvArabic.setText(mValues.get(position).getTextArabic());
-        holder.mTvExplanation.setText(mValues.get(position).getTextExplanation());
-        holder.mTvTranslation.setText(mValues.get(position).getRecite());
+        holder.mTvArabic.setText(mValues.get(position).getArabicText());
+        holder.mTvExplanation.setText(mValues.get(position).getEnglishExplanation());
+        holder.mTvExplanation.setVisibility(View.VISIBLE);
+        holder.mTvTranslation.setText(mValues.get(position).getPronounciation());
+        holder.mTvTranslation.setVisibility(View.VISIBLE);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +51,7 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+//                    mListener.onListFragmentInteraction(holder.mItem);
                 }
             }
         });
@@ -64,7 +67,7 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
         public final TextView mTvArabic;
         public final TextView mTvTranslation;
         public final TextView mTvExplanation;
-        public DuaStubs mItem;
+        public CommonDuaContent mItem;
 
         public ViewHolder(View view) {
             super(view);

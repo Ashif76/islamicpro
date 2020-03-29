@@ -32,16 +32,17 @@ public class RukyahPagerFragmentDetailsAdapter extends RecyclerView.Adapter<Ruky
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.rukyah_details_fragment_adapter, parent, false);
+                .inflate(R.layout.kuran_details_fragment_adapter, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvAyat.setText(mValues.get(position).textArabic);
-        holder.mTvExplanation.setText(mValues.get(position).textExplanation);
-        holder.mTvTranslation.setText(mValues.get(position).textTranslation);
+        holder.mTvAyat.setText(mValues.get(position).getTextArabic());
+        holder.mTvExplanation.setText("Recite: "+mValues.get(position).getRecite());
+        holder.mTvExplanation.setVisibility(View.VISIBLE);
+        holder.mTvTranslation.setText(position+1+". "+mValues.get(position).getTextExplanation());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

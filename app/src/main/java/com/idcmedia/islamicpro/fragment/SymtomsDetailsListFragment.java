@@ -8,17 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.idcmedia.islamicpro.R;
-import com.idcmedia.islamicpro.Utils;
-import com.idcmedia.islamicpro.adapter.CommonListFragmentAdapter;
-import com.idcmedia.islamicpro.adapter.KuranListFragmentAdapter;
-import com.idcmedia.islamicpro.model.CommonDuaContent;
-import com.idcmedia.islamicpro.model.DuaStubs;
+import com.idcmedia.islamicpro.adapter.SymptomsDetailsListFragmentAdapter;
+import com.idcmedia.islamicpro.adapter.SymptomsListFragmentAdapter;
+import com.idcmedia.islamicpro.model.ItemClickListener;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 import com.idcmedia.islamicpro.utils.JsonConvertUtil;
+import com.idcmedia.islamicpro.utils.Symptoms;
+import com.idcmedia.islamicpro.utils.SymptomsData;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
 
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
@@ -33,10 +31,11 @@ import androidx.recyclerview.widget.RecyclerView;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class CommonListFragment extends Fragment implements OnListFragmentInteractionListener {
+public class SymtomsDetailsListFragment extends Fragment implements ItemClickListener<Symptoms> {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
+    private static ArrayList<String> symptoms;
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
@@ -45,13 +44,14 @@ public class CommonListFragment extends Fragment implements OnListFragmentIntera
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public CommonListFragment() {
+    public SymtomsDetailsListFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static CommonListFragment newInstance(int columnCount) {
-        CommonListFragment fragment = new CommonListFragment();
+    public static SymtomsDetailsListFragment newInstance(int columnCount, ArrayList<String> symptoms) {
+        SymtomsDetailsListFragment.symptoms = symptoms;
+        SymtomsDetailsListFragment fragment = new SymtomsDetailsListFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -66,12 +66,13 @@ public class CommonListFragment extends Fragment implements OnListFragmentIntera
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
     }
+    SymptomsData duaData;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.kuran_list_fragment, container, false);
+        View view = inflater.inflate(R.layout.dua_list_fragment, container, false);
 
         // Set the adapter
 
@@ -83,9 +84,9 @@ public class CommonListFragment extends Fragment implements OnListFragmentIntera
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
-        Map<String, List<CommonDuaContent>> duaData = JsonConvertUtil.getDuaData(getContext(), 0);
-        List<String> collect = duaData.keySet().stream().collect(Collectors.toList());
-        recyclerView.setAdapter(new CommonListFragmentAdapter(Utils.dummyData(), this));
+
+
+        recyclerView.setAdapter(new SymptomsDetailsListFragmentAdapter(symptoms, this));
         return view;
     }
 
@@ -102,17 +103,29 @@ public class CommonListFragment extends Fragment implements OnListFragmentIntera
         mListener = null;
     }
 
-    @Override
-    public void onListFragmentInteraction(DuaStubs item) {
-//        Fragment newFragment = KuranDetailsFragment.newInstance(1);
+//    @Override
+//    public void onListFragmentInteraction(DuaStubs item) {
+////        Fragment newFragment = KuranDetailsFragment.newInstance(1);
+////        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+////        ft.replace(R.id.ll_rukyah_main, newFragment).commit();
+//
+//        Fragment newFragment = CommonDetailsFragment.newInstance(1);
 //        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//        ft.replace(R.id.ll_rukyah_main, newFragment).commit();
+//        ft.replace(R.id.ll_rukyah_main, newFragment,"CommonDetailsFragment");
+//        ft.addToBackStack("null");
+//        ft.commit();
+//    }
 
-        Fragment newFragment = CommonDetailsFragment.newInstance(1);
-        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.ll_rukyah_main, newFragment,"CommonDetailsFragment");
-        ft.addToBackStack("null");
-        ft.commit();
+    @Override
+    public void onItemClick(Symptoms duaName) {
+
+
+
+//        Fragment newFragment = SymtomsDetailsListFragment.newInstance(1);
+//        FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.ll_rukyah_main, newFragment,"DuaDetailsFragment");
+//        ft.addToBackStack("null");
+//        ft.commit();
     }
 
     /**

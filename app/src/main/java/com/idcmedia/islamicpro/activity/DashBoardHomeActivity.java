@@ -92,17 +92,22 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         tab2TextView.setText("Prayer");
 
 
+
         TabLayout.Tab tab3 = tabLayout.getTabAt(2);
         ImageView tab3Icon = tab3.getCustomView().findViewById(R.id.iv_icon);
         TextView tab3TextView = tab3.getCustomView().findViewById(R.id.txt_tab_name);
-        tab3Icon.setImageDrawable(getResources().getDrawable(R.drawable.adhan_1));
-        tab3TextView.setText("Muslim");
+        tab3Icon.setImageDrawable(getResources().getDrawable(R.drawable.play_48));
+        tab3TextView.setText("Watch Videos");
         tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int tagId = (int) tab.getTag();
                 if(tagId == 1){
                     Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+                    startActivity(intent);
+                }
+                if(tagId == 3){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
                     startActivity(intent);
                 }
             }
@@ -117,6 +122,10 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
                 int tagId = (int) tab.getTag();
                 if(tagId == 1){
                     Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+                    startActivity(intent);
+                }
+                if(tagId == 3){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
                     startActivity(intent);
                 }
             }
@@ -164,9 +173,14 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_kuran) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_notify) {
+            Intent intent = new Intent(DashBoardHomeActivity.this,NotificationActivity.class);
+            startActivity(intent);
+        }  else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -218,7 +232,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             }
 
             case Utils.SYMPTOMS_ID :{
-                Intent intent = new Intent(this,CommonDetailsMainActivity.class);
+                Intent intent = new Intent(this,SymptomsMainActivity.class);
                 startActivity(intent);
                 break;
             }

@@ -4,26 +4,27 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.idcmedia.islamicpro.R;
-import com.idcmedia.islamicpro.fragment.AzkarViewPagerFragment;
-import com.idcmedia.islamicpro.fragment.RukyahViewPagerFragment;
+import com.idcmedia.islamicpro.fragment.KuranListFragment;
 import com.idcmedia.islamicpro.fragment.YouTubeFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class AzkarMainActivity extends AppCompatActivity {
+public class ChannelVideoMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_azkar);
+        setContentView(R.layout.activity_main_kuran);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         if (savedInstanceState == null) {
-            Fragment newFragment = AzkarViewPagerFragment.newInstance("","");
+            Fragment newFragment = YouTubeFragment.newInstance("","");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.add(R.id.ll_rukyah_main, newFragment).commit();
+            ft.add(R.id.ll_rukyah_main, newFragment,"YouTubeFragment");
+//            ft.addToBackStack("null");
+            ft.commit();
         }
 
     }

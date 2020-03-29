@@ -10,6 +10,7 @@ import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.adapter.RukyahPagerFragmentDetailsAdapter;
 import com.idcmedia.islamicpro.model.DuaStubs;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
+import com.idcmedia.islamicpro.utils.JsonConvertUtil;
 
 import java.util.ArrayList;
 
@@ -28,6 +29,7 @@ public class RukyahPagerFragmentDetails extends Fragment implements OnListFragme
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
+    private static String rukyahFilName;
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
@@ -41,7 +43,8 @@ public class RukyahPagerFragmentDetails extends Fragment implements OnListFragme
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static RukyahPagerFragmentDetails newInstance(int columnCount) {
+    public static RukyahPagerFragmentDetails newInstance(int columnCount, String rukyahFilName) {
+        RukyahPagerFragmentDetails.rukyahFilName = rukyahFilName;
         RukyahPagerFragmentDetails fragment = new RukyahPagerFragmentDetails();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
@@ -73,13 +76,13 @@ public class RukyahPagerFragmentDetails extends Fragment implements OnListFragme
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
-        ArrayList<DuaStubs> duaStubs = new ArrayList<>();
-            DuaStubs duaStubs1 = new DuaStubs();
-            duaStubs1.setTextArabic("لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربيةلوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية ");
-            duaStubs1.setTextExplanation("Explanation");
-            duaStubs1.setTextTranslation("askdjfadf");
-            duaStubs.add(duaStubs1);
-        recyclerView.setAdapter(new RukyahPagerFragmentDetailsAdapter(duaStubs, this));
+//        ArrayList<DuaStubs> duaStubs = new ArrayList<>();
+//            DuaStubs duaStubs1 = new DuaStubs();
+//            duaStubs1.setTextArabic("لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربيةلوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربيةالمفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية المفاتيح العربية لوحة المفاتيح العربية ");
+//            duaStubs1.setTextExplanation("Explanation");
+//            duaStubs1.setVerse("askdjfadf");
+//            duaStubs.add(duaStubs1);
+        recyclerView.setAdapter(new RukyahPagerFragmentDetailsAdapter(JsonConvertUtil.getRukyah(getContext(),rukyahFilName).getContent(), this));
         return view;
     }
 

@@ -7,8 +7,11 @@ import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.model.DuaStubs;
+import com.idcmedia.islamicpro.model.ItemClickListener;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
+import com.idcmedia.islamicpro.utils.Symptoms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,12 +21,12 @@ import androidx.recyclerview.widget.RecyclerView;
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDetailsFragmentAdapter.ViewHolder> {
+public class SymptomsListFragmentAdapter extends RecyclerView.Adapter<SymptomsListFragmentAdapter.ViewHolder> {
 
-    private final List<DuaStubs> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final ArrayList<Symptoms> mValues;
+    private final ItemClickListener mListener;
 
-    public CommonDetailsFragmentAdapter(List<DuaStubs> items, OnListFragmentInteractionListener listener) {
+    public SymptomsListFragmentAdapter(ArrayList<Symptoms> items, ItemClickListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -31,16 +34,17 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.common_details_fragment_adapter, parent, false);
+                .inflate(R.layout.symptoms_list_fragment_adapter, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
-        holder.mTvArabic.setText(mValues.get(position).getTextArabic());
-        holder.mTvExplanation.setText(mValues.get(position).getTextExplanation());
-        holder.mTvTranslation.setText(mValues.get(position).getRecite());
+        holder.mTvArabic.setText(mValues.get(position).getTitle());
+        int positions = position+1;
+        holder.mDuaNo.setText("Chapter "+positions +". ");
+
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +52,7 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onItemClick(holder.mItem);
                 }
             }
         });
@@ -62,15 +66,15 @@ public class CommonDetailsFragmentAdapter extends RecyclerView.Adapter<CommonDet
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final View mView;
         public final TextView mTvArabic;
-        public final TextView mTvTranslation;
+        public final TextView mDuaNo;
         public final TextView mTvExplanation;
-        public DuaStubs mItem;
+        public Symptoms mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mTvArabic = (TextView) view.findViewById(R.id.tv_ayat);
-            mTvTranslation = (TextView) view.findViewById(R.id.tv_translation);
+            mTvArabic = (TextView) view.findViewById(R.id.tv_arabic);
+            mDuaNo = (TextView) view.findViewById(R.id.tv_dua_no);
             mTvExplanation = (TextView) view.findViewById(R.id.tv_exmplanation);
         }
 

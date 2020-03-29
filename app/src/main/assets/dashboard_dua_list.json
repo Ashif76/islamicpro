@@ -1,0 +1,64 @@
+{
+  "content": [
+    {
+      "category": "All",
+      "id":1 ,
+      "no_of_chapter": 123
+    },
+    {
+      "category": "Morning & Evening",
+      "id": 2,
+      "no_of_chapter": 6
+    },
+    {
+      "category": "Home & Family",
+      "id": 3,
+      "no_of_chapter": 14
+    },
+    {
+      "category": "Foods & Drinks",
+      "id": 4,
+      "no_of_chapter": 7
+    },
+    {
+      "category": "Joy & Distress",
+      "id":5 ,
+      "no_of_chapter": 15
+    },
+    {
+      "category": "Travel",
+      "id": 6 ,
+      "no_of_chapter": 11
+    },
+    {
+      "category": "Prayer",
+      "id": 7,
+      "no_of_chapter": 19
+    },
+    {
+      "category": "Praising Allah",
+      "id":8 ,
+      "no_of_chapter": 9
+    },
+    {
+      "category": "Hajj & Umrah",
+      "id": 9,
+      "no_of_chapter": 8
+    },
+    {
+      "category": "Good Etiquette",
+      "id": 10,
+      "no_of_chapter": 20
+    },
+    {
+      "category": "Nature",
+      "id": 11,
+      "no_of_chapter": 10
+    },
+    {
+      "category": "Sickness & Death",
+      "id": 12,
+      "no_of_chapter": 13
+    }
+  ]
+}

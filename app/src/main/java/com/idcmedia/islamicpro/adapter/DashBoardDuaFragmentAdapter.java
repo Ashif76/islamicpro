@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.model.DashBoardData;
+import com.idcmedia.islamicpro.model.DashBoardDuaItem;
 import com.idcmedia.islamicpro.model.ItemClickListener;
 
 import java.util.List;
@@ -21,10 +22,10 @@ import androidx.recyclerview.widget.RecyclerView;
  */
 public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardDuaFragmentAdapter.ViewHolder> {
 
-    private final List<DashBoardData> mValues;
+    private final List<DashBoardDuaItem> mValues;
     private final ItemClickListener mListener;
 
-    public DashBoardDuaFragmentAdapter(List<DashBoardData> items, ItemClickListener listener) {
+    public DashBoardDuaFragmentAdapter(List<DashBoardDuaItem> items, ItemClickListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -40,6 +41,7 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mTvTitle.setText(mValues.get(position).getName());
+        holder.mNoOfChapters.setText(mValues.get(position).getNoOfChapter()+" Chapters");
         setIconForDashBoard(mValues.get(position).getId(),holder.mTvIcon);
 
 
@@ -49,7 +51,7 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    DashBoardData mItem = holder.mItem;
+                    DashBoardDuaItem mItem = holder.mItem;
                     mListener.onItemClick(mItem);
                 }
             }
@@ -79,6 +81,9 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
             } case 7:{
                 mTvIcon.setImageResource(R.drawable.name_1);
                 break;
+            }default:{
+                mTvIcon.setImageResource(R.drawable.name_1);
+                break;
             }
         }
 
@@ -93,8 +98,9 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
         public final View mView;
         public final ImageView mTvIcon;
         public final TextView mTvTitle;
+        public final TextView mNoOfChapters;
         public final RelativeLayout mRlItem;
-        public DashBoardData mItem;
+        public DashBoardDuaItem mItem;
 
         public ViewHolder(View view) {
             super(view);
@@ -102,6 +108,7 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
             mTvIcon = (ImageView) view.findViewById(R.id.iv_dashboard_icon);
             mTvTitle = (TextView) view.findViewById(R.id.tv_title);
             mRlItem = (RelativeLayout) view.findViewById(R.id.rl_item);
+            mNoOfChapters = view.findViewById(R.id.tv_no_of_chapter);
         }
 
     }

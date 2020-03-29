@@ -9,7 +9,10 @@ import android.view.ViewGroup;
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.adapter.DashBoardDuaFragmentAdapter;
 import com.idcmedia.islamicpro.model.DashBoardData;
+import com.idcmedia.islamicpro.model.DashBoardDuaItem;
+import com.idcmedia.islamicpro.model.DashBoardDuaStubs;
 import com.idcmedia.islamicpro.model.DashBoardStubs;
+import com.idcmedia.islamicpro.model.DuaList;
 import com.idcmedia.islamicpro.model.DuaStubs;
 import com.idcmedia.islamicpro.model.GridSpacingItemDecoration;
 import com.idcmedia.islamicpro.model.ItemClickListener;
@@ -28,7 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class DashBoardDuaFragment extends Fragment implements ItemClickListener<DashBoardData> {
+public class DashBoardDuaFragment extends Fragment implements ItemClickListener<DashBoardDuaItem> {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -79,7 +82,7 @@ public class DashBoardDuaFragment extends Fragment implements ItemClickListener<
         int spacing = 50; // 50px
         boolean includeEdge = false;
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
-        DashBoardStubs dashBoardStubs = JsonConvertUtil.getDashBoardData(getActivity());
+        DashBoardDuaStubs dashBoardStubs = JsonConvertUtil.getDashBoardDuaData(getActivity());
         recyclerView.setAdapter(new DashBoardDuaFragmentAdapter(dashBoardStubs.getDashBoardData(), this));
 
         return view;
@@ -99,8 +102,8 @@ public class DashBoardDuaFragment extends Fragment implements ItemClickListener<
     }
 
     @Override
-    public void onItemClick(DashBoardData item) {
-        Fragment newFragment = CommonListFragment.newInstance(1);
+    public void onItemClick(DashBoardDuaItem item) {
+        Fragment newFragment = DuaListFragment.newInstance(1);
         FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.ll_rukyah_main, newFragment,"CommonListFragment");
         ft.addToBackStack("null");
