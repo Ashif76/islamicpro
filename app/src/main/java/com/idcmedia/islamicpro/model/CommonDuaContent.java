@@ -12,6 +12,16 @@ public class CommonDuaContent {
     private String source;
     private int duaTypeId;
 
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public int getDuaTypeId() {
         return duaTypeId;
     }

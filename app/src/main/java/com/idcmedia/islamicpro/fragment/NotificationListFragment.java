@@ -16,6 +16,8 @@ import com.idcmedia.islamicpro.model.DuaStubs;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -118,11 +120,18 @@ public class NotificationListFragment extends Fragment implements OnListFragment
                     commonDuaContent.setEnglishExplanation(englishExplanation);
                     commonDuaContent.setPronounciation(pronounciation);
                     commonDuaContent.setSource(source);
+                    commonDuaContent.setId(Long.parseLong(entry.getKey()));
                     commonDuaContentsList.add(commonDuaContent);
 
 
                 }
 
+                Collections.sort(commonDuaContentsList, new Comparator<CommonDuaContent>() {
+                    @Override
+                    public int compare(CommonDuaContent o1, CommonDuaContent o2) {
+                        return o2.getId().compareTo(o1.getId());
+                    }
+                });
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
