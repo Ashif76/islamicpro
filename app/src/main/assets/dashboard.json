@@ -7,10 +7,12 @@
     {
       "id":2,
       "name":"Dua"
-    } , {
-      "id":3,
-      "name":"Ayte Shifa"
-    } , {
+    }
+//  , {
+//      "id":3,
+//      "name":"Ayte Shifa"
+//    }
+  , {
       "id":4,
       "name":"Azkar"
     } , {

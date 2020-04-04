@@ -47,6 +47,8 @@
             </intent-filter>
         </service>
         <activity android:name="com.idcmedia.islamicpro.PdfRenderActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.AdhanMainActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.NamesMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.NotificationActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.ChannelVideoMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.SymptomsMainActivity" />

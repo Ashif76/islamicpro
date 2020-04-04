@@ -226,7 +226,9 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             }
 
             case Utils.ADHAN_ID :{
-                Intent intent = new Intent(this,CommonDetailsMainActivity.class);
+//                Intent intent = new Intent(this,CommonDetailsMainActivity.class);
+//                startActivity(intent);
+                Intent intent = new Intent(this,AdhanMainActivity.class);
                 startActivity(intent);
                 break;
             }
@@ -238,7 +240,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             }
 
             case Utils.NAMES99_ID :{
-                Intent intent = new Intent(this,CommonListMainActivity.class);
+                Intent intent = new Intent(this,NamesMainActivity.class);
                 startActivity(intent);
                 break;
             }

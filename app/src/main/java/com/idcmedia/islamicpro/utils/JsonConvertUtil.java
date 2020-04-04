@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 
 import com.google.gson.Gson;
+import com.idcmedia.islamicpro.model.AdhanList;
 import com.idcmedia.islamicpro.model.CommonDuaContent;
 import com.idcmedia.islamicpro.model.CommonDuaStubs;
 import com.idcmedia.islamicpro.model.DashBoardDuaStubs;
@@ -90,6 +91,12 @@ public class JsonConvertUtil {
     public static DuaList getRukyah(Context context, String fileName){
         Gson gson = new Gson();
         DuaList model = gson.fromJson(loadJSONFromAssets(context,fileName), DuaList.class);
+        return model;
+    }
+
+    public static AdhanList getAdhan(Context context, String fileName){
+        Gson gson = new Gson();
+        AdhanList model = gson.fromJson(loadJSONFromAssets(context,fileName), AdhanList.class);
         return model;
     }
 

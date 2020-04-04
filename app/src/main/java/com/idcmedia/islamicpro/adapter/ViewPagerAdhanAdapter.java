@@ -1,8 +1,8 @@
 package com.idcmedia.islamicpro.adapter;
 
 
+import com.idcmedia.islamicpro.fragment.AdhanPagerFragmentDetails;
 import com.idcmedia.islamicpro.fragment.RukyahPagerFragmentDetails;
-import com.idcmedia.islamicpro.fragment.RukyahViewPagerFragment;
 
 import java.util.ArrayList;
 
@@ -14,11 +14,11 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
  * Created by Belal on 2/3/2016.
  */
 //Extending FragmentStatePagerAdapter
-public class ViewPagerRukyahAdapter extends FragmentStatePagerAdapter {
+public class ViewPagerAdhanAdapter extends FragmentStatePagerAdapter {
 
     ArrayList<String> tabCount;
 
-    public ViewPagerRukyahAdapter(FragmentManager fm, ArrayList<String> tabCount) {
+    public ViewPagerAdhanAdapter(FragmentManager fm, ArrayList<String> tabCount) {
         super(fm);
         this.tabCount= tabCount;
     }
@@ -26,13 +26,12 @@ public class ViewPagerRukyahAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         String tabName = tabCount.get(position);
-        RukyahPagerFragmentDetails tab1;
-        if (tabName.equalsIgnoreCase("short")) {
-             tab1 = RukyahPagerFragmentDetails.newInstance(1,"short_rukyah.json");
-        }else  if (tabName.equalsIgnoreCase("long")) {
-            tab1 = RukyahPagerFragmentDetails.newInstance(1,"long_rquyah.json");
-        }else  {
-            tab1 = RukyahPagerFragmentDetails.newInstance(1,"complete_rukyah.json");
+        AdhanPagerFragmentDetails tab1;
+        if (tabName.equalsIgnoreCase("Fazar Adhan")) {
+            tab1 = AdhanPagerFragmentDetails.newInstance(1,"fazar_azan.json");
+
+        }else   {
+            tab1 = AdhanPagerFragmentDetails.newInstance(1,"common_azan.json");
         }
                 return tab1;
     }

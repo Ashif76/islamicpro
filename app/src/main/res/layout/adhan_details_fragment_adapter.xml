@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5dp"
+
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/marpad5"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textDirection="anyRtl"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:lineSpacingExtra="20dp"
+                android:letterSpacing="0.0"
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize30sp"
+                android:id="@+id/tv_ayat"
+                android:textColor="@color/black"
+                android:text="لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية لوحة المفاتيح العربية" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:id="@+id/tv_translation"
+                android:textSize="@dimen/marpad16"
+                android:textStyle="italic"
+                android:layout_marginTop="@dimen/marpad8"
+                android:text="translation" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/marpad8"
+
+                android:textStyle="bold|italic"
+                android:textSize="@dimen/textsize16sp"
+                android:id="@+id/tv_exmplanation"
+                android:text="exmplanation" />
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/marpad8"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/marpad8"
+                android:visibility="gone"
+                android:id="@+id/ll_action">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/marpad4"
+                    android:id="@+id/iv_save_position"
+                    android:src="@drawable/ic_menu_send"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marpad16"
+                    android:padding="@dimen/marpad4"
+                    android:src="@drawable/ic_menu_manage"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/marpad16"
+                    android:padding="@dimen/marpad4"
+                    android:src="@drawable/ic_menu_share"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

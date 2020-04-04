@@ -7,12 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.idcmedia.islamicpro.R;
+import com.idcmedia.islamicpro.adapter.AdhanPagerFragmentDetailsAdapter;
 import com.idcmedia.islamicpro.adapter.RukyahPagerFragmentDetailsAdapter;
 import com.idcmedia.islamicpro.model.DuaStubs;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 import com.idcmedia.islamicpro.utils.JsonConvertUtil;
-
-import java.util.ArrayList;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -25,7 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
-public class RukyahPagerFragmentDetails extends Fragment implements OnListFragmentInteractionListener {
+public class AdhanPagerFragmentDetails extends Fragment implements OnListFragmentInteractionListener {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
@@ -38,14 +37,14 @@ public class RukyahPagerFragmentDetails extends Fragment implements OnListFragme
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public RukyahPagerFragmentDetails() {
+    public AdhanPagerFragmentDetails() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static RukyahPagerFragmentDetails newInstance(int columnCount, String rukyahFilName) {
+    public static AdhanPagerFragmentDetails newInstance(int columnCount, String rukyahFilName) {
 
-        RukyahPagerFragmentDetails fragment = new RukyahPagerFragmentDetails();
+        AdhanPagerFragmentDetails fragment = new AdhanPagerFragmentDetails();
         fragment.rukyahFilName = rukyahFilName;
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
@@ -83,7 +82,7 @@ public class RukyahPagerFragmentDetails extends Fragment implements OnListFragme
 //            duaStubs1.setTextExplanation("Explanation");
 //            duaStubs1.setVerse("askdjfadf");
 //            duaStubs.add(duaStubs1);
-        recyclerView.setAdapter(new RukyahPagerFragmentDetailsAdapter(JsonConvertUtil.getRukyah(getContext(),rukyahFilName).getContent(), this));
+        recyclerView.setAdapter(new AdhanPagerFragmentDetailsAdapter(JsonConvertUtil.getAdhan(getContext(),rukyahFilName).getContent(), this));
         return view;
     }
 

@@ -4,37 +4,25 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.idcmedia.islamicpro.R;
-import com.idcmedia.islamicpro.fragment.AzkarViewPagerFragment;
-import com.idcmedia.islamicpro.fragment.DuaDetailsFragment;
-import com.idcmedia.islamicpro.fragment.DuaListFragment;
-import com.idcmedia.islamicpro.fragment.NotificationListFragment;
-import com.idcmedia.islamicpro.model.CommonDuaContent;
-
-import java.util.List;
+import com.idcmedia.islamicpro.fragment.AdhanViewPagerFragment;
+import com.idcmedia.islamicpro.fragment.RukyahViewPagerFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class NotificationActivity extends AppCompatActivity {
+public class AdhanMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_azkar);
+        setContentView(R.layout.activity_main_rukyah);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        setTitle("Notifications");
         if (savedInstanceState == null) {
-
-
-            Fragment newFragment = NotificationListFragment.newInstance(1,null);
+            Fragment newFragment = AdhanViewPagerFragment.newInstance("","");
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.ll_rukyah_main, newFragment,"NotificationListFragment");
-//            ft.addToBackStack("null");
-            ft.commit();
-
-
+            ft.add(R.id.ll_rukyah_main, newFragment).commit();
         }
 
     }
