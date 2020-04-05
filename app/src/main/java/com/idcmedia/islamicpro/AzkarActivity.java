@@ -65,7 +65,7 @@ public class AzkarActivity extends AppCompatActivity implements View.OnClickList
                 break;
             }
             case R.id.ll_long_ruq:{
-                startActivityIntent("asar_azkar.pdf");
+                startActivityIntent("parah_21.pdf");
                 break;
             }
             case R.id.ll_general_ruq:{

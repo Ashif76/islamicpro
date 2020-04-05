@@ -17,6 +17,7 @@
         android:padding="8dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/title"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:textStyle="bold|italic"
         android:text="title"
@@ -29,6 +30,7 @@
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
+        android:visibility="gone"
         ads:adUnitId="@string/banner_id"
         >
     </com.google.android.gms.ads.AdView>
@@ -48,6 +50,7 @@
         android:id="@+id/pdf_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitXY"
         android:layout_below="@+id/adView"
        />
 

@@ -157,9 +157,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             case R.id.ll_99_names:{
-                int value = Utils.getSharedPref(this, Utils.NAMES99_KEY);
-                Utils.setSharedPref(this, Utils.NAMES99_KEY,value+1);
-                startActivityIntent("99names.pdf", Utils.NAMES99_KEY);
+                Intent intent = new Intent(MainActivity.this, LatestPdfViewActivity.class);
+                startActivityForResult(intent,REQUEST_CODE);
+//                int value = Utils.getSharedPref(this, Utils.NAMES99_KEY);
+//                Utils.setSharedPref(this, Utils.NAMES99_KEY,value+1);
+//                startActivityIntent("parah_21.pdf", Utils.NAMES99_KEY);
                 break;
             }
 

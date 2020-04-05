@@ -368,6 +368,7 @@ public class PdfRenderActivity extends AppCompatActivity {
         currentPage.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);
         // We are ready to show the Bitmap to user.
         imageViewPdf.setImageBitmap(bitmap);
+        imageViewPdf.setCropToPadding(true);
         updateUi();
     }
 

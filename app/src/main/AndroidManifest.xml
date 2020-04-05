@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="com.idcmedia.islamicpro.PdfRenderActivity" />
         <activity android:name="com.idcmedia.islamicpro.AzkarActivity" />
+        <activity android:name="com.idcmedia.islamicpro.PdfViewActivity" />
+        <activity android:name="com.idcmedia.islamicpro.LatestPdfViewActivity" />
         <activity
             android:name="com.idcmedia.islamicpro.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" /> <!-- <activity android:name=".PDFViewActivity" -->
