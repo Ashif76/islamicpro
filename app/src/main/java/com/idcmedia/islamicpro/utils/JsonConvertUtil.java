@@ -10,6 +10,8 @@ import com.idcmedia.islamicpro.model.CommonDuaStubs;
 import com.idcmedia.islamicpro.model.DashBoardDuaStubs;
 import com.idcmedia.islamicpro.model.DashBoardStubs;
 import com.idcmedia.islamicpro.model.DuaList;
+import com.idcmedia.islamicpro.model.KuranParahItem;
+import com.idcmedia.islamicpro.model.KuranParahList;
 import com.idcmedia.islamicpro.model.KuranSurahData;
 import com.idcmedia.islamicpro.model.KuranSurahModel;
 import com.idcmedia.islamicpro.model.SurahDetails;
@@ -17,12 +19,9 @@ import com.idcmedia.islamicpro.model.SurahDetails;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 import androidx.annotation.RequiresApi;
 
@@ -78,6 +77,12 @@ public class JsonConvertUtil {
     public static ArrayList<KuranSurahData> getKuranSurahList(Context context){
         Gson gson = new Gson();
         KuranSurahModel model = gson.fromJson(loadJSONFromAssets(context,"surahs_list.json"), KuranSurahModel.class);
+        return model.getData();
+    }
+
+    public static List<KuranParahItem> getKuranParahList(Context context){
+        Gson gson = new Gson();
+        KuranParahList model = gson.fromJson(loadJSONFromAssets(context,"parah_list.json"), KuranParahList.class);
         return model.getData();
     }
 

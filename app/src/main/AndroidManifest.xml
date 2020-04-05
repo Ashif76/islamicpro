@@ -59,6 +59,7 @@
         <activity android:name="com.idcmedia.islamicpro.activity.KuranMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.CommonDetailsMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.CommonListMainActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.KuranFullReadingMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.SettingActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.YouVideoPlayActivity"
             android:configChanges="orientation|screenSize"/>

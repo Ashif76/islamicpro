@@ -175,7 +175,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
 
         if (id == R.id.nav_kuran) {
             // Handle the camera action
-            Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+            Intent intent = new Intent(DashBoardHomeActivity.this,KuranFullReadingMainActivity.class);
             startActivity(intent);
         }else if (id == R.id.nav_notify) {
             Intent intent = new Intent(DashBoardHomeActivity.this,NotificationActivity.class);

@@ -3,6 +3,7 @@ package com.idcmedia.islamicpro;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Environment;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -10,9 +11,13 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.idcmedia.islamicpro.model.DuaStubs;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Timer;
+
+import androidx.core.content.ContextCompat;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -109,7 +114,11 @@ public class Utils  {
         editor.putString(key, value);
         editor.apply();
     }
-
+    public static String getStringValueSharedPref(Context context, String key){
+        SharedPreferences sharedPref = context.getSharedPreferences(KEY_NOTIFICATION_SHARED_PREF, Context.MODE_PRIVATE);
+        String value = sharedPref.getString(key,"");
+        return  value;
+    }
     public static int getStringSharedPref(Context context, String key){
         SharedPreferences sharedPref = context.getSharedPreferences(KEY_NOTIFICATION_SHARED_PREF, Context.MODE_PRIVATE);
         int value = sharedPref.getInt(key,0);
@@ -186,5 +195,23 @@ public class Utils  {
         duaStubs3.setVerse("askdjfadf");
         duaStubs.add(duaStubs3);
         return duaStubs;
+    }
+
+    public static String getRootDirPath(Context context) {
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+            File file = ContextCompat.getExternalFilesDirs(context.getApplicationContext(),
+                    null)[0];
+            return file.getAbsolutePath();
+        } else {
+            return context.getApplicationContext().getFilesDir().getAbsolutePath();
+        }
+    }
+
+    public static String getProgressDisplayLine(long currentBytes, long totalBytes) {
+        return getBytesToMBString(currentBytes) + "/" + getBytesToMBString(totalBytes);
+    }
+
+    private static String getBytesToMBString(long bytes){
+        return String.format(Locale.ENGLISH, "%.2fMb", bytes / (1024.00 * 1024.00));
     }
 }
