@@ -1,5 +1,6 @@
 package com.idcmedia.islamicpro.fragment;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,11 +19,15 @@ import com.idcmedia.islamicpro.model.KuranSurahData;
 import com.idcmedia.islamicpro.model.OnListFragmentInteractionListener;
 import com.idcmedia.islamicpro.utils.JsonConvertUtil;
 
+import java.io.File;
+import java.util.List;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import okhttp3.internal.Util;
 
 /**
  * A fragment representing a list of Items.
@@ -63,29 +68,71 @@ public class KuranInstallationListFragment extends Fragment implements ItemClick
             mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
         }
     }
-
+    RecyclerView recyclerView;
+    ProgressDialog progressDialog;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.kuran_list_fragment, container, false);
-
+        progressDialog =  new ProgressDialog(getContext());
+        progressDialog.setMessage("Please wait...");
+        progressDialog.setCancelable(false);
         // Set the adapter
        intializeDownloader();
             Context context = view.getContext();
-            RecyclerView recyclerView = view.findViewById(R.id.rv_dua_details);
+            recyclerView = view.findViewById(R.id.rv_dua_details);
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
-            recyclerView.setAdapter(new KuranInstallationListFragmentAdapter(getContext(),JsonConvertUtil.getKuranParahList(getContext()), this));
-
+        prepareData();
 //        int surahPosition = Utils.getIntSharedPref(context, Utils.SURAH_POSITION_KEY);
 //        if (surahPosition!=0){
 //            recyclerView.scrollToPosition(surahPosition);
 //        }
         return view;
+    }
+    private boolean isTempFileExist(KuranParahItem mItem) {
+        String dirPath = Utils.getRootDirPath(getContext())+"/"+mItem.getEnglish_name()+".pdf.temp";
+        File file = new File(dirPath);
+        return file.exists();
+    }
+
+
+    private boolean isFileExist(KuranParahItem mItem) {
+        String dirPath = Utils.getRootDirPath(getContext())+"/"+mItem.getEnglish_name()+".pdf";
+        File file = new File(dirPath);
+        return file.exists();
+    }
+    public void prepareData(){
+        progressDialog.show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                List<KuranParahItem> kuranParahList = JsonConvertUtil.getKuranParahList(getContext());
+                for(KuranParahItem item:kuranParahList){
+                    if(isFileExist(item)){
+                        item.setCurrentFileStatus(Utils.DOWNLOADED);
+                    }else  if(isTempFileExist(item)){
+                        item.setCurrentFileStatus(Utils.RESUME_DOWNLOADING);
+                    }else{
+                        item.setCurrentFileStatus(Utils.START_DOWNLOADING);
+                    }
+                }
+
+
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(new KuranInstallationListFragmentAdapter(getContext(),kuranParahList, KuranInstallationListFragment.this));
+                        progressDialog.dismiss();
+                    }
+                });
+            }
+        }).start();
     }
 
     private void intializeDownloader() {

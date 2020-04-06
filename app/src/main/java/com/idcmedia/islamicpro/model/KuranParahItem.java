@@ -3,6 +3,16 @@ package com.idcmedia.islamicpro.model;
 public class KuranParahItem {
     private String english_name;
     private String arabic_name;
+    private String url;
+    private int currentFileStatus;
+
+    public int getCurrentFileStatus() {
+        return currentFileStatus;
+    }
+
+    public void setCurrentFileStatus(int currentFileStatus) {
+        this.currentFileStatus = currentFileStatus;
+    }
 
     public String getEnglish_name() {
         return english_name;
@@ -28,5 +38,5 @@ public class KuranParahItem {
         this.url = url;
     }
 
-    private String url;
+
 }

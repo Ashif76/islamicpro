@@ -26,6 +26,9 @@ public class Utils  {
     public static  final long loadAddFreqInMillis = 60000;
     public static  final long loadAddFreqInMillisForRewarded = 600000;
     public static  final long loadFullScreenAddFreqInMillisFor = 600000;
+    public static final  int RESUME_DOWNLOADING = 111;
+    public static final  int START_DOWNLOADING = 222;
+    public static final  int DOWNLOADED = 333;
     public static final  int RUKYAH_ID = 1;
     public static final  int AZKAR_ID = 4;
     public static final  int DUA_ID = 2;
