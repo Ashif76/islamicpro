@@ -73,6 +73,7 @@
                 android:layout_height="40dp"
                 android:orientation="horizontal"
                 android:padding="@dimen/marpad8"
+                android:visibility="gone"
                 android:id="@+id/ll_action">
                 <ImageView
                     android:layout_width="wrap_content"
