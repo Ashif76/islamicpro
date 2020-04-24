@@ -4,9 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.idcmedia.islamicpro.R;
@@ -18,6 +23,7 @@ import com.idcmedia.islamicpro.model.GridSpacingItemDecoration;
 import com.idcmedia.islamicpro.model.ItemClickListener;
 import com.idcmedia.islamicpro.utils.JsonConvertUtil;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -30,6 +36,8 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DashBoardHomeActivity extends AppCompatActivity implements ItemClickListener<DashBoardData>, NavigationView.OnNavigationItemSelectedListener {
 
     private int mColumnCount = 2;
+    private AdView adView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +45,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        MobileAds.initialize(this, getResources().getString(R.string.app_add_id));
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -57,8 +66,14 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        adView = findViewById(R.id.adView);
         RecyclerView recyclerView = findViewById(R.id.rv_home);
+        smallAddListener();
+        Utils.loadAdd(adView);
+        Utils.setTimeForAdd(this,adView);
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.page_intersial_add_id));
+        fullScreenListener();
         if (mColumnCount <= 1) {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
         } else {
@@ -75,21 +90,113 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         setupTabView(tabLayout);
 
     }
-    public void setupTabView(TabLayout tabLayout){
-        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(1));
-        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(2));
-        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(3));
-        TabLayout.Tab tab1 = tabLayout.getTabAt(0);
-        ImageView tab1Icon = tab1.getCustomView().findViewById(R.id.iv_icon);
-        TextView tab1TextView = tab1.getCustomView().findViewById(R.id.txt_tab_name);
-        tab1Icon.setImageDrawable(getResources().getDrawable(R.drawable.adhan_1));
-        tab1TextView.setText("Kuran");
 
-        TabLayout.Tab tab2 = tabLayout.getTabAt(1);
+    private void fullScreenListener() {
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+//                Toast.makeText(PdfRenderActivity.this, "add loaded", Toast.LENGTH_SHORT).show();
+//                Utils.showFullScreen(mInterstitialAd);
+                // Code to be executed when an ad finishes loading.
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+//                Toast.makeText(PdfRenderActivity.this, "add failed"+errorCode, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+//                Toast.makeText(PdfRenderActivity.this, "add opened", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+//                Toast.makeText(PdfRenderActivity.this, "adds loaded", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+//                Toast.makeText(PdfRenderActivity.this, "adds left app", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdClosed() {
+//                Toast.makeText(PdfRenderActivity.this, "adds closed", Toast.LENGTH_SHORT).show();
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+    }
+
+
+    private void smallAddListener(){
+        adView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+//                 Toast.makeText(PdfRenderActivity.this, "add loaded", Toast.LENGTH_SHORT).show();
+                // Code to be executed when an ad finishes loading.
+
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+//                 Toast.makeText(PdfRenderActivity.this, "add failed"+errorCode, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+//                 Toast.makeText(PdfRenderActivity.this, "add opened", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+//                 Toast.makeText(PdfRenderActivity.this, "adds loaded", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+//                 Toast.makeText(PdfRenderActivity.this, "adds left app", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdClosed() {
+//                 Toast.makeText(PdfRenderActivity.this, "adds closed", Toast.LENGTH_SHORT).show();
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+    }
+
+    public void setupTabView(TabLayout tabLayout){
+        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(2));
+        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(1));
+        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(3));
+
+        TabLayout.Tab tab2 = tabLayout.getTabAt(0);
         ImageView tab2Icon = tab2.getCustomView().findViewById(R.id.iv_icon);
         TextView tab2TextView = tab2.getCustomView().findViewById(R.id.txt_tab_name);
-        tab2Icon.setImageDrawable(getResources().getDrawable(R.drawable.rukya_2));
-        tab2TextView.setText("Prayer");
+        tab2Icon.setImageDrawable(getResources().getDrawable(R.drawable.home_96));
+        tab2TextView.setText("Home");
+
+        TabLayout.Tab tab1 = tabLayout.getTabAt(1);
+        ImageView tab1Icon = tab1.getCustomView().findViewById(R.id.iv_icon);
+        TextView tab1TextView = tab1.getCustomView().findViewById(R.id.txt_tab_name);
+        tab1Icon.setImageDrawable(getResources().getDrawable(R.drawable.kuran_96));
+        tab1TextView.setText("Quran");
+
+
 
 
 
@@ -103,11 +210,17 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             public void onTabSelected(TabLayout.Tab tab) {
                 int tagId = (int) tab.getTag();
                 if(tagId == 1){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
                     startActivity(intent);
                 }
                 if(tagId == 3){
                     Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
+                    startActivityForResult(intent,200);
+                }
+
+                if(tagId==2){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
             }
@@ -121,11 +234,17 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             public void onTabReselected(TabLayout.Tab tab) {
                 int tagId = (int) tab.getTag();
                 if(tagId == 1){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,KuranMainActivity.class);
+                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
                     startActivity(intent);
                 }
                 if(tagId == 3){
                     Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
+                    startActivityForResult(intent,200);
+                }
+
+                if(tagId==2){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
             }
@@ -175,11 +294,11 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
 
         if (id == R.id.nav_kuran) {
             // Handle the camera action
-            Intent intent = new Intent(DashBoardHomeActivity.this,KuranFullReadingMainActivity.class);
-            startActivity(intent);
+            Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
+            startActivityForResult(intent,200);
         }else if (id == R.id.nav_notify) {
             Intent intent = new Intent(DashBoardHomeActivity.this,NotificationActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent,200);
         }  else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
@@ -204,7 +323,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         switch (id){
             case Utils.DUA_ID :{
                 Intent intent = new Intent(this, DashBoardDuaMainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,200);
                 break;
             }
 
@@ -221,7 +340,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
 
             case Utils.AYTE_SHIFA_ID :{
                 Intent intent = new Intent(this,CommonDetailsMainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,200);
                 break;
             }
 
@@ -229,25 +348,32 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
 //                Intent intent = new Intent(this,CommonDetailsMainActivity.class);
 //                startActivity(intent);
                 Intent intent = new Intent(this,AdhanMainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,200);
                 break;
             }
 
             case Utils.SYMPTOMS_ID :{
                 Intent intent = new Intent(this,SymptomsMainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,200);
                 break;
             }
 
             case Utils.NAMES99_ID :{
                 Intent intent = new Intent(this,NamesMainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent,200);
                 break;
             }
         }
     }
 
-//    @Override
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Utils.showFullScreen(mInterstitialAd);
+        Utils.loadInterstelFullScreenAdd(mInterstitialAd);
+    }
+
+    //    @Override
 //    public void onPointerCaptureChanged(boolean hasCapture) {
 //
 //    }

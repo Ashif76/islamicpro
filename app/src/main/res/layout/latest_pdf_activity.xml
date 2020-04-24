@@ -1,0 +1,135 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+<RelativeLayout
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+
+	android:layout_above="@+id/footer"
+	android:id="@+id/rl_main"
+	>
+
+	<ImageView
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/img_page"
+	android:background="@color/black"
+	android:scaleType="fitXY"
+	/>
+
+</RelativeLayout>
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:background="@color/white"
+		android:layout_gravity="bottom"
+		android:gravity="bottom"
+		android:weightSum="2"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/footer"
+
+		android:orientation="horizontal"
+		android:layout_height="50dp">
+
+
+		<ImageView
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:padding="@dimen/marpad5"
+			android:id="@+id/img_overlay"
+			android:visibility="gone"
+			android:layout_centerVertical="true"
+			android:layout_gravity="center"
+			android:src="@drawable/ic_menu_gallery"/>
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:id="@+id/rl_sound"
+			android:padding="@dimen/marpad5"
+			android:layout_weight="1">
+			<ImageView
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+
+				android:layout_centerVertical="true"
+				android:layout_gravity="center"
+				android:layout_centerInParent="true"
+				android:id="@+id/img_spund"
+				android:scaleType="fitXY"
+
+				android:src="@drawable/sund_96"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/img_spund"
+				android:text="Disable Sound"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:visibility="gone"
+			android:padding="@dimen/marpad5"
+			android:id="@+id/rl_unsound"
+			android:layout_weight="1">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+
+			android:layout_centerInParent="true"
+			android:layout_gravity="center"
+			android:id="@+id/img_unSound"
+
+			android:scaleType="fitXY"
+
+			android:src="@drawable/unsound_96"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/img_unSound"
+				android:text="Enable Sound"/>
+
+		</RelativeLayout>
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:padding="@dimen/marpad5"
+			android:orientation="vertical"
+			android:layout_weight="1">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+
+			android:layout_centerInParent="true"
+			android:id="@+id/img_mark"
+			android:scaleType="fitXY"
+			android:layout_gravity="center"
+
+			android:src="@drawable/mark_96"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:gravity="center_horizontal"
+				android:layout_below="@+id/img_mark"
+				android:text="Mark Page"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<!--<com.github.barteksc.pdfviewer.PDFView-->
+		<!--android:id="@+id/pdfView"-->
+
+		<!--android:layout_width="match_parent"-->
+		<!--android:layout_height="match_parent"/>-->
+
+</RelativeLayout>

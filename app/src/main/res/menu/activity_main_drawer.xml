@@ -6,21 +6,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_kuran"
-            android:icon="@drawable/adhan_1"
-            android:title="Kuran" />
+            android:icon="@drawable/kuran_48"
+            android:title="Quran" />
 
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/rukya_2"
+            android:visible="false"
             android:title="Prayer" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/adhan_1"
+            android:visible="false"
             android:title="Muslim" />
 
         <item
             android:id="@+id/nav_notify"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/notification_48"
             android:title="Notification" />
         <item
             android:id="@+id/nav_manage"
@@ -34,6 +36,7 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_send"
+                android:visible="false"
                 android:title="Contact Us" />
             <item
                 android:id="@+id/nav_send"

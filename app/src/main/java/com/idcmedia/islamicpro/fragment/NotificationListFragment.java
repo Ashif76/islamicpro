@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.Utils;
@@ -68,6 +69,7 @@ public class NotificationListFragment extends Fragment implements OnListFragment
         }
     }
     RecyclerView recyclerView;
+    TextView noItemFound;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -83,7 +85,7 @@ public class NotificationListFragment extends Fragment implements OnListFragment
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-
+            noItemFound =  view.findViewById(R.id.tv_no_itemfound);
             loadData();
 
         return view;
@@ -94,6 +96,11 @@ public class NotificationListFragment extends Fragment implements OnListFragment
 
         SharedPreferences stringSharedPrefAll = Utils.getStringSharedPrefAll(getContext());
         Map<String, String> all = (Map<String, String>) stringSharedPrefAll.getAll();
+        if(all.isEmpty()){
+            noItemFound.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.GONE);
+            return;
+        }
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -125,6 +132,9 @@ public class NotificationListFragment extends Fragment implements OnListFragment
 
 
                 }
+
+                noItemFound.setVisibility(View.GONE);
+                recyclerView.setVisibility(View.VISIBLE);
 
                 Collections.sort(commonDuaContentsList, new Comparator<CommonDuaContent>() {
                     @Override

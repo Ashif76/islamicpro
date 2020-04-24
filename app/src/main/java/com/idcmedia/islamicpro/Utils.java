@@ -38,7 +38,7 @@ public class Utils  {
     public static final  int NAMES99_ID = 7;
     public static  final String KEY_SHARED_PREF = "my_shared_pref";
     public static  final String KEY_NOTIFICATION_SHARED_PREF = "my_notification_shared_pref";
-
+    public static  final String KURAN_RESUME = "KURAN_RESUME";
     public static final String RUKYAH_KEY = "RUQYAH";
     public static final String DUA_KEY = "DUA";
     public static final String ADHAN_KEY = "ADHAN";
@@ -50,8 +50,11 @@ public class Utils  {
     public static final String SURAH_POSITION_KEY = "surah_position";
     public static final String AYAT_POSITION_KEY = "ayat_position";
     public static final String YOUTUBE_API_KEY = "AIzaSyCSP-4CfseY2oPhFoInQ-xpnUxn2wObzQ0";
-
-
+    public static final String FILE_PATH = "filepatha";
+    public static final String SOUND_STATUS = "spundstatus";
+    public static final String RESUME_READ_PARAH = "RESUME_READ_PARAH";
+    public static final String PARAH_NAME = "PARAH_NAME";
+    public static final String CURENT_CLICK_PARAH_POS = "CURENT_CLICK_PARAH_POS";
 
 
     public static void loadAdd(AdView adView){
@@ -112,11 +115,25 @@ public class Utils  {
         editor.apply();
     }
 
+    public static void setStringSharedPrefCommon(Context context , String key, String value){
+        SharedPreferences.Editor editor = context.getSharedPreferences(KURAN_RESUME, MODE_PRIVATE).edit();
+        editor.putString(key, value);
+        editor.apply();
+    }
+
+    public static String getStringValueSharedPrefCommon(Context context, String key){
+        SharedPreferences sharedPref = context.getSharedPreferences(KURAN_RESUME, Context.MODE_PRIVATE);
+        String value = sharedPref.getString(key,"");
+        return  value;
+    }
+
     public static void setStringSharedPref(Context context , String key, String value){
         SharedPreferences.Editor editor = context.getSharedPreferences(KEY_NOTIFICATION_SHARED_PREF, MODE_PRIVATE).edit();
         editor.putString(key, value);
         editor.apply();
     }
+
+
     public static String getStringValueSharedPref(Context context, String key){
         SharedPreferences sharedPref = context.getSharedPreferences(KEY_NOTIFICATION_SHARED_PREF, Context.MODE_PRIVATE);
         String value = sharedPref.getString(key,"");

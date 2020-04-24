@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.AdView;
 import com.idcmedia.islamicpro.R;
 import com.idcmedia.islamicpro.Utils;
 import com.idcmedia.islamicpro.adapter.CommonListFragmentAdapter;
@@ -41,6 +42,7 @@ public class DuaListFragment extends Fragment implements ItemClickListener<Strin
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+    private AdView adView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -85,8 +87,11 @@ public class DuaListFragment extends Fragment implements ItemClickListener<Strin
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
 
+
         duaData = JsonConvertUtil.getDuaData(getContext(), -1);
         List<String> collect = duaData.keySet().stream().collect(Collectors.toList());
+        collect.sort((o1, o2) -> o1.compareTo(o2));
+
         recyclerView.setAdapter(new DuaListFragmentAdapter(collect, this));
         return view;
     }

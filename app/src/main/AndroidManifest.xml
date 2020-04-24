@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -29,6 +30,7 @@
             <!--android:value="@string/default_notification_channel_id" />-->
         <activity android:name="com.idcmedia.islamicpro.WatchVideoActivity"></activity>
         <activity android:name="com.idcmedia.islamicpro.RuqyahActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.QuranNewMainActivity" />
         <activity
             android:name="com.idcmedia.islamicpro.SplashScreen"
             android:label="@string/app_name"
@@ -60,6 +62,12 @@
         <activity android:name="com.idcmedia.islamicpro.activity.CommonDetailsMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.CommonListMainActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.KuranFullReadingMainActivity" />
+        <activity android:name="com.idcmedia.islamicpro.activity.LatestPdfViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name="com.idcmedia.islamicpro.activity.KuranReadMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
         <activity android:name="com.idcmedia.islamicpro.activity.SettingActivity" />
         <activity android:name="com.idcmedia.islamicpro.activity.YouVideoPlayActivity"
             android:configChanges="orientation|screenSize"/>

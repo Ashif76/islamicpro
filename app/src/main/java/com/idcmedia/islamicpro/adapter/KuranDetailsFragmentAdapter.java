@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,7 +45,7 @@ public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDeta
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.kuran_details_fragment_adapter, parent, false);
+                .inflate(R.layout.kuran_detaile_new_fragment_adapter, parent, false);
         return new ViewHolder(view);
     }
 
@@ -69,7 +70,7 @@ public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDeta
         }
 
 
-        holder.ivResumeSurahPosition.setOnClickListener(new View.OnClickListener() {
+        holder.llMark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != mListener) {
@@ -78,7 +79,14 @@ public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDeta
                     Utils.setIntSharedPref(context,Utils.AYAT_POSITION_KEY,position);
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    Toast.makeText(context,"Verse has been saved. You can resume your reading from here later.",Toast.LENGTH_LONG).show();
+                    Snackbar snackbar = Snackbar
+                            .make(holder.mView, "Verse has been saved. You can resume your reading from here later.", Snackbar.LENGTH_SHORT);
+//					snackbar = Snackbar.make(view, "Page has been marked you can resume latter...", Snackbar.LENGTH_SHORT);
+//                    View snackBarView = snackbar.getView();
+//                    snackBarView.setBackgroundColor(context.getResources().getColor(R.color.holo_blue));
+//
+                    snackbar.show();
+//                    Toast.makeText(context,"Verse has been saved. You can resume your reading from here later.",Toast.LENGTH_LONG).show();
                     notifyDataSetChanged();
                     mListener.onItemClick(holder.mItem);
                 }
@@ -97,7 +105,7 @@ public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDeta
         public final TextView mTvTranslation;
         public final TextView mTvExplanation;
         public SurahVerse mItem;
-        public ImageView ivResumeSurahPosition;
+        public LinearLayout llMark;
         public CardView cardView;
 
         public ViewHolder(View view) {
@@ -105,7 +113,7 @@ public class KuranDetailsFragmentAdapter extends  RecyclerView.Adapter<KuranDeta
             mView = view;
             mTvArabic = (TextView) view.findViewById(R.id.tv_ayat);
             cardView = view.findViewById(R.id.card_view);
-            ivResumeSurahPosition = view.findViewById(R.id.iv_save_position);
+            llMark = view.findViewById(R.id.ll_action);
             mTvTranslation = (TextView) view.findViewById(R.id.tv_translation);
             mTvExplanation = (TextView) view.findViewById(R.id.tv_exmplanation);
         }

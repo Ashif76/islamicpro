@@ -9,19 +9,20 @@
     tools:showIn="@layout/activity_main_temp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:layout_marginTop="@dimen/marpad5"
+        android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
+        android:layout_marginTop="@dimen/marpad5"
+        android:layout_marginBottom="@dimen/marpad5"
         ads:adUnitId="@string/banner_id"
-        >
-    </com.google.android.gms.ads.AdView>
-
+        />
     <!--<androidx.cardview.widget.CardView-->
         <!--android:id="@+id/card_view"-->
         <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
@@ -35,12 +36,11 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent">-->
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/adView"
-            android:layout_marginTop="@dimen/marpad8"
-            android:layout_marginBottom="70dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/marpad12"
+            android:layout_marginTop="@dimen/marpad4"
+            android:layout_centerInParent="true"
             android:id="@+id/rv_home"/>
 <!--</RelativeLayout>-->
 
@@ -51,6 +51,7 @@
         android:layout_height="60dp"
         android:orientation="vertical"
         android:gravity="bottom"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:layout_width="match_parent">

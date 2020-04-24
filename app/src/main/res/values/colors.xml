@@ -17,4 +17,6 @@
     <color name="lightblue">#5D80C9</color>
     <color name="colorAccent">#D81B60</color>
     <color name="orange">#F84336</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="red_transparent">#FDEB45</color>
 </resources>

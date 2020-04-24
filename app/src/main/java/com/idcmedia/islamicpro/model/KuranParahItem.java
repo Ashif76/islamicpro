@@ -5,6 +5,33 @@ public class KuranParahItem {
     private String arabic_name;
     private String url;
     private int currentFileStatus;
+    private String localFilePath;
+    private int fileCount;
+    private boolean isReading;
+
+    public boolean isReading() {
+        return isReading;
+    }
+
+    public void setReading(boolean reading) {
+        isReading = reading;
+    }
+
+    public int getFileCount() {
+        return fileCount;
+    }
+
+    public void setFileCount(int fileCount) {
+        this.fileCount = fileCount;
+    }
+
+    public String getLocalFilePath() {
+        return localFilePath;
+    }
+
+    public void setLocalFilePath(String localFilePath) {
+        this.localFilePath = localFilePath;
+    }
 
     public int getCurrentFileStatus() {
         return currentFileStatus;
