@@ -44,6 +44,7 @@ public class DuaDetailsFragmentAdapter extends RecyclerView.Adapter<DuaDetailsFr
         holder.mTvExplanation.setVisibility(View.VISIBLE);
         holder.mTvTranslation.setText(mValues.get(position).getPronounciation());
         holder.mTvTranslation.setVisibility(View.VISIBLE);
+        holder.mSource.setText(mValues.get(position).getSource());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +69,7 @@ public class DuaDetailsFragmentAdapter extends RecyclerView.Adapter<DuaDetailsFr
         public final TextView mTvTranslation;
         public final TextView mTvExplanation;
         public CommonDuaContent mItem;
+        public TextView mSource;
 
         public ViewHolder(View view) {
             super(view);
@@ -75,6 +77,7 @@ public class DuaDetailsFragmentAdapter extends RecyclerView.Adapter<DuaDetailsFr
             mTvArabic = (TextView) view.findViewById(R.id.tv_ayat);
             mTvTranslation = (TextView) view.findViewById(R.id.tv_translation);
             mTvExplanation = (TextView) view.findViewById(R.id.tv_exmplanation);
+            mSource = view.findViewById(R.id.tv_source);
         }
 
     }

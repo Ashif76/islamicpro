@@ -22,10 +22,10 @@
         <item>Accordion</item>
     </string-array>
  <!--  test add ids-->
- <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="page_intersial_add_id">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="video_rewarded_add_id">ca-app-pub-3940256099942544/5224354917</string>
-    <string name="app_add_id">ca-app-pub-3940256099942544~3347511713</string>
+ <!--<string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--<string name="page_intersial_add_id">ca-app-pub-3940256099942544/1033173712</string>-->
+    <!--<string name="video_rewarded_add_id">ca-app-pub-3940256099942544/5224354917</string>-->
+    <!--<string name="app_add_id">ca-app-pub-3940256099942544~3347511713</string>-->
 
     <!--&lt;!&ndash; production add ids&ndash;&gt;-->
    <!--<string name="banner_id">ca-app-pub-6400545883700482/6132290165</string>-->
@@ -47,10 +47,10 @@
     <!--<string name="app_add_id">ca-app-pub-6882611079938933~5226262012</string>-->
 
     <!-- production latest of latest amir add ids-->
-    <!--<string name="banner_id">ca-app-pub-2396266721068891/1131454351</string>-->
-    <!--<string name="page_intersial_add_id">ca-app-pub-2396266721068891/8957973480</string>-->
-    <!--<string name="video_rewarded_add_id">ca-app-pub-2396266721068891/1431655496</string>-->
-    <!--<string name="app_add_id">ca-app-pub-2396266721068891~2320891871</string>-->
+    <string name="banner_id">ca-app-pub-2396266721068891/1131454351</string>
+    <string name="page_intersial_add_id">ca-app-pub-2396266721068891/8957973480</string>
+    <string name="video_rewarded_add_id">ca-app-pub-2396266721068891/1431655496</string>
+    <string name="app_add_id">ca-app-pub-2396266721068891~2320891871</string>
     <string name="title_location_permission">Allow location access to serve you better.</string>
     <string name="text_location_permission">Allow location access to serve you better</string>
     <string name="ok">Accept</string>

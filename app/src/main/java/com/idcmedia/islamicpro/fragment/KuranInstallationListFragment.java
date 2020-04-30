@@ -84,7 +84,7 @@ public class KuranInstallationListFragment extends Fragment implements ItemClick
         progressDialog =  new ProgressDialog(getContext());
         progressDialog.setMessage("Please wait...");
         progressDialog.setCancelable(false);
-        String prahResume =Utils.getStringValueSharedPref(getContext(),Utils.RESUME_READ_PARAH);
+        String prahResume =Utils.getStringValueSharedPrefCommon(getContext(),Utils.RESUME_READ_PARAH);
 
         if(prahResume!=null && !prahResume.isEmpty()) {
             String[] nameData = prahResume.split("_");

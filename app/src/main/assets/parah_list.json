@@ -1,163 +1,219 @@
 {
 
   "data": [
-
     {
-      "number": 1,
-      "arabic_name": "الضَّالِّين",
       "english_name": "para1",
-      "url":"https://github.com/Ashif76/kurandata/raw/master/para1.zip",
+      "arabic_name": "آلم ",
+      "fileName": " Alif-laam-meem",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para1.zip",
       "fileCount":19
     },
 
     {
-      "number": 1,
-      "arabic_name": "الضَّالِّين",
-      "english_name": "kuran",
-      "url":"https://github.com/Ashif76/kurandata/raw/master/kuran.zip",
-      "fileCount":17
+      "english_name": "para2",
+      "arabic_name": " سَيَقُولُ",
+      "fileName": " Sayaqūlu",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para2.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para3",
+      "arabic_name": "تِلْكَ ٱلْرُّسُلُ",
+      "fileName": " Tilka r-Rusulu ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para3.zip",
+      "fileCount":18
+
+    },
+    {
+      "english_name": "para4",
+      "arabic_name": "لَنْ تَنَالُوا",
+      "fileName": " Lan Tana Loo ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para4.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para5",
+      "arabic_name": "وَالْمُحْصَنَاتُ",
+      "fileName": "Wal Mohsanat",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para5.zip",
+      "fileCount":18
+
+
+    },
+    {
+      "english_name": "para6",
+      "arabic_name": "لَا يُحِبُّ اللَّهُ",
+      "fileName": "La Yuhibbullah ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para6.zip",
+
+      "fileCount":18
+    },
+    {
+      "english_name": "para7",
+      "arabic_name": "وَإِذَا سَمِعُو",
+      "fileName": " Wa Iza Samiu",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para7.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para8",
+      "arabic_name": "وَلَوْ أَنَّنَا",
+      "fileName": " Wa Lau Annana",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para8.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para9",
+      "arabic_name": "قَالَ الْمَلَأُ",
+      "fileName": "Qalal Malao ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para9.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para10",
+      "arabic_name": "وَاعْلَمُوا",
+      "fileName": " Wa A'lamu ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para10.zip",
+      "fileCount":18
+    },{
+      "english_name": "para11",
+      "arabic_name": "يَعْتَذِرُونَ",
+      "fileName": "Yatazeroon",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para11.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para12",
+      "arabic_name": "وَمَا مِنْ دَابَّةٍ",
+      "fileName": " Wa Mamin Da'abat",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para12.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para13",
+      "arabic_name": "وَمَا أُبَرِّئُ",
+      "fileName": " Wa Ma Ubrioo",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para13.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para14",
+      "arabic_name": "رُبَمَا",
+      "fileName": "Rubama",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para14.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para15",
+      "arabic_name": "سُبْحَانَ الَّذِي",
+      "fileName": " Subhanallazi ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para15.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para16",
+      "arabic_name": "قَالَ أَلَمْ",
+      "fileName": "Qal Alam ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para16.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para17",
+      "arabic_name": "اقْتَرَبَ",
+      "fileName": "Aqtarabo",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para17.zip",
+      "fileCount":18
+    },{
+      "english_name": "para18",
+      "arabic_name": "قَدْ أَفْلَحَ",
+      "fileName": "Qadd Aflaha",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para18.zip",
+      "fileCount":18
+
+    },{
+      "english_name": "para19",
+      "arabic_name": "وَقَالَ الَّذِينَ",
+      "fileName": "Wa Qalallazina",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para19.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para20",
+      "arabic_name": "أَمَّنْ خَلَقَ",
+      "fileName": "A'man Khalaq ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para20.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para21",
+      "arabic_name": "اتْلُ مَا أُوحِيَ",
+      "fileName": "Utlu Ma Oohi ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para21.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para22",
+      "arabic_name": "وَمَنْ يَقْنُتْ",
+      "fileName": "Wa Manyaqnut",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para22.zip",
+      "fileCount":18
+    },
+    {
+      "english_name": "para23",
+      "arabic_name": "وَمَا لِيَ",
+      "fileName": "Wa Mali ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para23.zip",
+      "fileCount":18
     },
 
     {
-      "number": 1,
-      "arabic_name": " أَنفُسَهُم",
-      "english_name": "Shaikul",
-      "url":"https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_500_kB.pdf"
-    },
-
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para24",
+      "arabic_name": "فَمَنْ أَظْلَمُ",
+      "fileName": "Faman Azlam",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para24.zip",
+      "fileCount":18
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para25",
+      "arabic_name": "إِلَيْهِ يُرَدُّ",
+      "fileName": " Elahe Yuruddo",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para25.zip",
+      "fileCount":18
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para26",
+      "arabic_name": "حم",
+      "fileName": " Ha'a Meem",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para26.zip",
+      "fileCount":18
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para27",
+      "arabic_name": "قَالَ فَمَا خَطْبُكُمْ",
+      "fileName": " Qala Fama Khatbukum ",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para27.zip",
+      "fileCount":18
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para28",
+      "arabic_name": "قَدْ سَمِعَ اللَّهُ",
+      "fileName": "Qadd Sami Allah",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para28.zip",
+      "fileCount":20
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },{
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para29",
+      "arabic_name": "تَبَارَكَ الَّذِي",
+      "fileName": "Tabarakallazi",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para29.zip",
+      "fileCount":20
     },
     {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },{
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },{
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },{
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-
-    {
-      "number": 1,
-      "arabic_name": "الضَّالِّين",
-      "english_name": "parah2",
-      "url":"https://github.com/Ashif76/kurandata/raw/master/parah2.zip",
-      "fileCount":17
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
-    },
-    {
-      "number": 1,
-      "arabic_name": "A",
-      "english_name": "The Opening"
+      "english_name": "para30",
+      "arabic_name": "عَمَّ يَتَسَاءَلُونَ",
+      "fileName": " Amma Yatasa'aloon",
+      "url":"https://raw.githubusercontent.com/amir029/quran/master/para30.zip",
+      "fileCount":22
     }
 
   ]

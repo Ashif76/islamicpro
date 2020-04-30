@@ -4,508 +4,496 @@
       "arabic_text": "الرحمن ",
       "english_explanation": "Ar Rahman ",
       "english_transaltion": " The Most Gracious"
-    } ,
-{
+    },
+    {
       "arabic_text": "الرحيم ",
       "english_explanation": "Ar Raheem ",
       "english_transaltion": "The Most Merciful "
-    } ,
-{
+    },
+    {
       "arabic_text": "الملك ",
       "english_explanation": "Al Malik ",
       "english_transaltion": " The King"
-    } ,
-{
+    },
+    {
       "arabic_text": "القدوس ",
       "english_explanation": "Al Quddus ",
       "english_transaltion": "The Most Holy "
-    } ,
-{
+    },
+    {
+      "arabic_text": "السَّلاَمُ ",
+      "english_explanation": "	As Salam ",
+      "english_transaltion": "The Perfection and Giver of Peace"
+    },
+    {
       "arabic_text": "المؤمن ",
       "english_explanation": "Al Mu'min ",
       "english_transaltion": "The Guardian of Faith "
-    } ,
-{
+    },
+    {
       "arabic_text": "المهيمن ",
       "english_explanation": "Al Muhaymin ",
       "english_transaltion": "The Guardian, the Preserver "
-    } ,
-{
+    },
+    {
       "arabic_text": " العزيز",
       "english_explanation": "Al Aziz ",
       "english_transaltion": "The Almighty, the Self Sufficient "
-    } ,
-{
+    },
+    {
       "arabic_text": "الجبار ",
       "english_explanation": " Al Jabbaar",
       "english_transaltion": "The Compeller "
-    } ,
-{
+    },
+    {
       "arabic_text": "الْمُتَكَبِّرُ ",
       "english_explanation": " Al Mutakabbir",
       "english_transaltion": "The Dominant one "
-    } ,
-{
+    },
+    {
       "arabic_text": "الخالق ",
       "english_explanation": "Al Khaaliq ",
       "english_transaltion": " The Creator"
-    } ,
-{
+    },
+    {
       "arabic_text": "البارئ ",
       "english_explanation": "Al Baari ",
       "english_transaltion": "The Maker "
-    } ,
-{
+    },
+    {
       "arabic_text": "المصور ",
       "english_explanation": " Al Musawwi",
       "english_transaltion": " The Fashioner of Forms"
-    } ,
-{
-      "arabic_text": " الغفار
-",
+    },
+    {
+      "arabic_text": " الغفار ",
       "english_explanation": " Al Ghaffaar",
       "english_transaltion": "The Ever-Forgiving "
-    } ,
-{
+    },
+    {
       "arabic_text": "القهار ",
       "english_explanation": "Al Qahhaar ",
       "english_transaltion": " The All Subduer"
-    } ,
-{
+    },
+    {
       "arabic_text": "الوهاب ",
       "english_explanation": "Al Wahhaab ",
       "english_transaltion": "The Bestower "
-    } ,
-{
+    },
+    {
       "arabic_text": "الرزاق ",
       "english_explanation": " Ar Razzaaq",
-      "english_transaltion": " Ar Razzaaq
-The Ever-Providing, The Sustainer"
-    } ,
-{
+      "english_transaltion": " Ar Razzaaq The Ever-Providing, The Sustainer"
+    },
+    {
       "arabic_text": "الفتاح ",
       "english_explanation": "Al Fattaah ",
       "english_transaltion": " The Ultimate Judge, The Opener of All Portals, the Victory Giver"
-    } ,
-{
+    },
+    {
       "arabic_text": "العليم ",
       "english_explanation": "Al Alim ",
       "english_transaltion": " The All-Knowing, the Omniscient"
-    } ,
-{
+    },
+    {
       "arabic_text": "القابض ",
       "english_explanation": "Al Qaabidh ",
       "english_transaltion": "The Restrainer, the Straightener "
-    } ,
-{
+    },
+    {
       "arabic_text": "الباسط ",
       "english_explanation": " Al Baasit",
       "english_transaltion": "The Expander, the Munificent "
-    } ,
-{
+    },
+    {
       "arabic_text": "الخافض ",
       "english_explanation": " Al Khaafidh",
       "english_transaltion": " The Abaser, The Demeanor"
-    } ,
-{
+    },
+    {
       "arabic_text": "الرافع ",
       "english_explanation": "Ar Raafi' ",
       "english_transaltion": "The Exalter "
-    } ,
-{
+    },
+    {
       "arabic_text": " المعز",
       "english_explanation": "Al Mu'izz ",
       "english_transaltion": "The Giver of Honour "
-    } ,
-{
+    },
+    {
       "arabic_text": "المذل ",
-      "english_explanation": " 
-Al Muzil",
+      "english_explanation": "  Al Muzil",
       "english_transaltion": " The Giver of Dishonor"
-    } ,
-{
+    },
+    {
       "arabic_text": "السميع ",
       "english_explanation": " As Sami'",
       "english_transaltion": " The All-Hearing"
-    } ,
-{
+    },
+    {
       "arabic_text": "البصير ",
       "english_explanation": "Al Basir ",
       "english_transaltion": " The All-Seeing"
-    } ,
-{
+    },
+    {
       "arabic_text": "الحكم ",
       "english_explanation": "Al Hakam ",
       "english_transaltion": "The Judge, the Ultimate Arbiter "
-    } ,
-{
+    },
+    {
       "arabic_text": " العدل",
       "english_explanation": "Al 'Adl ",
       "english_transaltion": "The Utterly Just "
-    } ,
-{
+    },
+    {
       "arabic_text": "اللطيف ",
       "english_explanation": "Al Latif ",
       "english_transaltion": "The Kind "
-    } ,
-{
+    },
+    {
       "arabic_text": "الخبير ",
       "english_explanation": "Al Khabir ",
       "english_transaltion": "The All-Aware "
-    } ,
-{
+    },
+    {
       "arabic_text": " الحليم",
-      "english_explanation": "
-Al Halim ",
+      "english_explanation": " Al Halim ",
       "english_transaltion": "The Forbearer, The Indulgent "
-    } ,
-{
+    },
+    {
       "arabic_text": " العظيم",
       "english_explanation": "Al-‘Adheem ",
       "english_transaltion": "The Magnificent, the Infinite "
-    } ,
-{
+    },
+    {
       "arabic_text": "الغفور ",
       "english_explanation": " Al Ghafur",
       "english_transaltion": "The All-Forgiving "
-    } ,
-{
+    },
+    {
       "arabic_text": " الشكور",
       "english_explanation": "Ash Shakur ",
       "english_transaltion": "The Grateful "
-    } ,
-{
+    },
+    {
       "arabic_text": "العلي ",
       "english_explanation": "Al Ali ",
       "english_transaltion": "The Sublimely Exalted "
-    } ,
-{
+    },
+    {
       "arabic_text": "الكبير ",
       "english_explanation": "Al Kabir ",
       "english_transaltion": " The Great"
-    } ,
-{
+    },
+    {
       "arabic_text": "الحفيظ ",
       "english_explanation": "Al Hafidh ",
       "english_transaltion": "The Preserver, The Protector "
-    } ,
-{
+    },
+    {
       "arabic_text": "المقيت ",
       "english_explanation": "Al Muqit ",
       "english_transaltion": "The Nourisher "
-    } ,
-{
+    },
+    {
       "arabic_text": "الحسيب ",
       "english_explanation": "Al Hasib ",
       "english_transaltion": "The Reckoner "
-    } ,
-{
+    },
+    {
       "arabic_text": " الجليل",
       "english_explanation": "Al Jalil ",
       "english_transaltion": "The Majestic "
-    } ,
-{
+    },
+    {
       "arabic_text": " الكريم",
       "english_explanation": "Al Karim ",
       "english_transaltion": "The Bountiful, the Generous "
-    } ,
-{
+    },
+    {
       "arabic_text": "الرقيب ",
-      "english_explanation": "
-Ar Raqib ",
+      "english_explanation": " Ar Raqib ",
       "english_transaltion": "The Watchful "
-    } ,
-{
+    },
+    {
       "arabic_text": "المجيب ",
       "english_explanation": " Al Mujib",
       "english_transaltion": "The Responsive, the Answerer "
-    } ,
-{
+    },
+    {
       "arabic_text": "الواسع ",
       "english_explanation": "Al Wasi' ",
       "english_transaltion": "The Vast, the All Encompassing "
-    } ,
-{
+    },
+    {
       "arabic_text": " الحكيم",
-      "english_explanation": "
-Al Hakim ",
+      "english_explanation": " Al Hakim ",
       "english_transaltion": " The Wise"
-    } ,
-{
+    },
+    {
       "arabic_text": "الودود ",
       "english_explanation": " Al Wadud",
       "english_transaltion": "The Loving, the Kind One "
-    } ,
-{
+    },
+    {
       "arabic_text": "المجيد ",
       "english_explanation": "Al Majid ",
       "english_transaltion": "The All Glorious "
-    } ,
-{
+    },
+    {
       "arabic_text": "الباعث ",
       "english_explanation": "Al Ba'ith ",
       "english_transaltion": "The Raiser of the Dead "
-    } ,
-{
+    },
+    {
       "arabic_text": "الشهيد ",
       "english_explanation": "Ash Shaheed ",
       "english_transaltion": "The Witness "
-    } ,
-{
+    },
+    {
       "arabic_text": "الحق ",
-      "english_explanation": "
-Al Haqq ",
+      "english_explanation": " Al Haqq ",
       "english_transaltion": "The Truth, the Real "
-    } ,
-{
+    },
+    {
       "arabic_text": "الوكيل ",
       "english_explanation": "Al Wakil ",
       "english_transaltion": "The Trustee, the Dependable "
-    } ,
-{
+    },
+    {
       "arabic_text": "القوي ",
       "english_explanation": " Al Qawiyy",
       "english_transaltion": " The Strong"
-    } ,
-{
+    },
+    {
       "arabic_text": "المتين ",
       "english_explanation": " Al Mateen",
       "english_transaltion": "The Firm, the Steadfast "
-    } ,
-{
+    },
+    {
       "arabic_text": "الولي ",
-      "english_explanation": "
-Al Wali ",
+      "english_explanation": " Al Wali ",
       "english_transaltion": "The Protecting Friend, Patron, and Supporter "
-    } ,
-{
+    },
+    {
       "arabic_text": "الحميد ",
       "english_explanation": "Al Hamidu ",
       "english_transaltion": "The All Praise Worthy "
-    } ,
-{
+    },
+    {
       "arabic_text": "المحصي ",
       "english_explanation": "Al Muhsi ",
       "english_transaltion": "The Accounter, The Numberer of All "
-    } ,
-{
+    },
+    {
       "arabic_text": " المبدئ",
       "english_explanation": "Al Mubdi ",
       "english_transaltion": "The Producer, Originator, and Initiator of all "
-    } ,
-{
+    },
+    {
       "arabic_text": "المعيد ",
-      "english_explanation": "
-Al Mu'id ",
+      "english_explanation": " Al Mu'id ",
       "english_transaltion": "The Reinstater Who Brings Back All "
-    } ,
-{
+    },
+    {
       "arabic_text": "المحيي ",
-      "english_explanation": " 
-Al Muhyi",
+      "english_explanation": "  Al Muhyi",
       "english_transaltion": "The Giver of Life "
-    } ,
-{
+    },
+    {
       "arabic_text": "المميت ",
       "english_explanation": "Al Mumit ",
       "english_transaltion": "The Bringer of Death, the Destroyer "
-    } ,
-{
+    },
+    {
       "arabic_text": " الحي",
       "english_explanation": " Al Hayy",
       "english_transaltion": "The Ever Living "
-    } ,
-{
+    },
+    {
       "arabic_text": "القيوم ",
       "english_explanation": "Al Qayyum ",
       "english_transaltion": "The Self Subsisting Sustainer of All "
-    } ,
-{
+    },
+    {
       "arabic_text": "الواجد ",
       "english_explanation": "Al Waajid ",
       "english_transaltion": "The Perceiver, the Finder, the Unfailing "
-    } ,
-{
+    },
+    {
       "arabic_text": "الماجد ",
       "english_explanation": "Al Maajid ",
       "english_transaltion": "The Illustrious, the Magnificent "
-    } ,
-{
-      "arabic_text": "الواحد
- ",
+    },
+    {
+      "arabic_text": "الواحد  ",
       "english_explanation": "Al Waahid ",
       "english_transaltion": "The One, the All Inclusive, the Indivisible "
-    } ,
-{
+    },
+    {
       "arabic_text": "الاحد ",
       "english_explanation": "Al Ahad ",
       "english_transaltion": "The One, the Indivisible "
-    } ,
-{
+    },
+    {
       "arabic_text": "الصمد ",
       "english_explanation": "As Samad ",
       "english_transaltion": "The Everlasting,The Eternal Refuge "
-    } ,
-{
+    },
+    {
       "arabic_text": "القادر ",
-      "english_explanation": "
-Al Qaadir ",
+      "english_explanation": " Al Qaadir ",
       "english_transaltion": " The All-Capable, The Most Able, The Most Powerful"
-    } ,
-{
+    },
+    {
       "arabic_text": "المقتدر ",
       "english_explanation": "Al Muqtadir ",
       "english_transaltion": "The All Determiner, the Dominant "
-    } ,
-{
+    },
+    {
       "arabic_text": "المقدم ",
       "english_explanation": "Al Muqaddim ",
       "english_transaltion": "The Expediter, He who brings forward "
-    } ,
-{
+    },
+    {
       "arabic_text": " المؤخر",
       "english_explanation": "Al Mu'akhkhir ",
       "english_transaltion": " The Delayer, He who brings backwards"
-    } ,
-{
+    },
+    {
       "arabic_text": "الأول ",
       "english_explanation": "Al Awwal ",
       "english_transaltion": "The First "
-    } ,
-{
+    },
+    {
       "arabic_text": " الآخر",
       "english_explanation": " Al Aakhir",
       "english_transaltion": "The Last "
-    } ,
-{
+    },
+    {
       "arabic_text": "الظاهر ",
       "english_explanation": "Az Dhaahir ",
       "english_transaltion": " The Manifest; the All Victorious"
-    } ,
-{
+    },
+    {
       "arabic_text": " الباطن",
       "english_explanation": "Al Baatin ",
       "english_transaltion": "The Hidden; the All Encompassing "
-    } ,
-{
+    },
+    {
       "arabic_text": "الوالي ",
       "english_explanation": "Al Waali ",
       "english_transaltion": "The Patron "
-    } ,
-{
+    },
+    {
       "arabic_text": " المتعالي",
       "english_explanation": "Al Muta'ali ",
       "english_transaltion": "The Self Exalted "
-    } ,
-{
+    },
+    {
       "arabic_text": "البر ",
       "english_explanation": "Al Barr ",
       "english_transaltion": "The Most Kind and Righteous "
-    } ,
-{
+    },
+    {
       "arabic_text": "التواب ",
       "english_explanation": " At Tawwaab",
       "english_transaltion": "The Ever-Pardoning, Ever Relenting "
-    } ,
-{
+    },
+    {
       "arabic_text": "المنتقم ",
       "english_explanation": " Al Muntaqim",
       "english_transaltion": "The Avenger "
-    } ,
-{
+    },
+    {
       "arabic_text": "العفو ",
       "english_explanation": "Al 'Afuww ",
       "english_transaltion": "The Pardoner, The Forgiver "
-    } ,
-{
+    },
+    {
       "arabic_text": "الرؤوف ",
-      "english_explanation": "
-Ar Ra'uf ",
+      "english_explanation": " Ar Ra'uf ",
       "english_transaltion": "The Clement, The Compassionate, The All-Pitying "
-    } ,
-{
+    },
+    {
       "arabic_text": "مالك الملك ",
       "english_explanation": " Malik Al Mulk",
       "english_transaltion": "The Owner of All Sovereignty "
-    } ,
-{
+    },
+    {
       "arabic_text": "ذو الجلال و الإكرام ",
       "english_explanation": " Dhual Jalal wa Al Ikram",
       "english_transaltion": "The Lord of Majesty and Generosity "
-    } ,
-{
+    },
+    {
       "arabic_text": "المقسط ",
       "english_explanation": "Al Muqsit ",
       "english_transaltion": "The Equitable, the Requiter "
-    } ,
-{
+    },
+    {
       "arabic_text": "الجامع ",
       "english_explanation": "Al Jaami' ",
       "english_transaltion": "The Gatherer, the Unifier "
-    } ,
-{
+    },
+    {
       "arabic_text": " الغني",
       "english_explanation": "Al Ghani ",
       "english_transaltion": "The All Rich, the Independent "
-    } ,
-{
+    },
+    {
       "arabic_text": "المغني ",
       "english_explanation": "Al Mughni ",
       "english_transaltion": "The Enricher, the Emancipator "
-    } ,
-{
+    },
+    {
       "arabic_text": "المانع ",
       "english_explanation": "Al Mani' ",
       "english_transaltion": "The Withholder, the Shielder, the Defender "
-    } ,
-{
+    },
+    {
       "arabic_text": " الضآر",
-      "english_explanation": "
-Ad Dharr ",
+      "english_explanation": " Ad Dharr ",
       "english_transaltion": "The Distresser "
-    } ,
-{
+    },
+    {
       "arabic_text": "النافع ",
       "english_explanation": " An Nafi'",
       "english_transaltion": "The Propitious, the Benefactor "
-    } ,
-{
+    },
+    {
       "arabic_text": " النور",
       "english_explanation": "An Nur ",
       "english_transaltion": "The Light "
-    } ,
-{
+    },
+    {
       "arabic_text": " الهادي",
       "english_explanation": " Al Hadi",
       "english_transaltion": "The Guide "
-    } ,
-{
+    },
+    {
       "arabic_text": " البديع",
       "english_explanation": "Al Badi'i ",
       "english_transaltion": "Incomparable, the Originator "
-    } ,
-{
+    },
+    {
       "arabic_text": "الباقي ",
       "english_explanation": "Al Baaqi ",
       "english_transaltion": "The Ever Enduring and Immutable "
-    } ,
-{
+    },
+    {
       "arabic_text": "الوارث ",
       "english_explanation": " Al Waarith",
       "english_transaltion": "The Heir, the Inheritor of All "
-    } ,
-{
-      "arabic_text": " الرشيد
-",
+    },
+    {
+      "arabic_text": " الرشيد ",
       "english_explanation": "Ar Rashid ",
       "english_transaltion": "The Guide, Infallible Teacher, and Knower "
-    } ,
-{
+    },
+    {
       "arabic_text": "الصبور ",
       "english_explanation": " Al Saboor",
       "english_transaltion": "The Forbearing, The Patient "
-    } 
-
-    
+    }
   ]
 }

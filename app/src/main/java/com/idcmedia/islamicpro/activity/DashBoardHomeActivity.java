@@ -180,9 +180,15 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
     }
 
     public void setupTabView(TabLayout tabLayout){
-        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(2));
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(1));
+        tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(2));
         tabLayout.addTab(tabLayout.newTab().setCustomView(R.layout.custom_tab_view).setTag(3));
+
+//        TabLayout.Tab tab2 = tabLayout.getTabAt(3);
+//        ImageView tab2Icon = tab2.getCustomView().findViewById(R.id.iv_icon);
+//        TextView tab2TextView = tab2.getCustomView().findViewById(R.id.txt_tab_name);
+//        tab2Icon.setImageDrawable(getResources().getDrawable(R.drawable.home_96));
+//        tab2TextView.setText("Notification");
 
         TabLayout.Tab tab2 = tabLayout.getTabAt(0);
         ImageView tab2Icon = tab2.getCustomView().findViewById(R.id.iv_icon);
@@ -193,7 +199,7 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
         TabLayout.Tab tab1 = tabLayout.getTabAt(1);
         ImageView tab1Icon = tab1.getCustomView().findViewById(R.id.iv_icon);
         TextView tab1TextView = tab1.getCustomView().findViewById(R.id.txt_tab_name);
-        tab1Icon.setImageDrawable(getResources().getDrawable(R.drawable.kuran_96));
+        tab1Icon.setImageDrawable(getResources().getDrawable(R.drawable.kuran_skecth96));
         tab1TextView.setText("Quran");
 
 
@@ -210,18 +216,22 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             public void onTabSelected(TabLayout.Tab tab) {
                 int tagId = (int) tab.getTag();
                 if(tagId == 1){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
-                    startActivity(intent);
-                }
-                if(tagId == 3){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
-                    startActivityForResult(intent,200);
-                }
-
-                if(tagId==2){
                     Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+
+                }
+                if(tagId == 2){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
+                    startActivity(intent);
+
+                }
+
+                if(tagId==3){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
+                    startActivityForResult(intent,200);
+//                    Intent intent = new Intent(DashBoardHomeActivity.this,NotificationActivity.class);
+//                    startActivityForResult(intent,200);
                 }
             }
 
@@ -233,19 +243,37 @@ public class DashBoardHomeActivity extends AppCompatActivity implements ItemClic
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 int tagId = (int) tab.getTag();
-                if(tagId == 1){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
-                    startActivity(intent);
-                }
-                if(tagId == 3){
-                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
-                    startActivityForResult(intent,200);
-                }
+//                if(tagId == 1){
+//                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
+//                    startActivity(intent);
+//                }
+//                if(tagId == 3){
+//                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
+//                    startActivityForResult(intent,200);
+//                }
+//
+//                if(tagId==2){
+//                    Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+//                }
 
-                if(tagId==2){
+                if(tagId == 1){
                     Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
+                }
+                if(tagId == 2){
+                    Intent intent = new Intent(DashBoardHomeActivity.this,QuranNewMainActivity.class);
+                    startActivity(intent);
+                }
+
+                if(tagId==3){
+//                    Intent intent = new Intent(DashBoardHomeActivity.this,DashBoardHomeActivity.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    startActivity(intent);
+                    Intent intent = new Intent(DashBoardHomeActivity.this,ChannelVideoMainActivity.class);
+                    startActivityForResult(intent,200);
                 }
             }
         });

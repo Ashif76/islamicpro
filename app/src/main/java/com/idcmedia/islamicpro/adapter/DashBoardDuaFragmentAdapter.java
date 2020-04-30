@@ -61,7 +61,7 @@ public class DashBoardDuaFragmentAdapter extends RecyclerView.Adapter<DashBoardD
     private void setIconForDashBoard(int id, ImageView mTvIcon) {
         switch (id){
             case 1:{
-               mTvIcon.setImageResource(R.drawable.rukya_2);
+               mTvIcon.setImageResource(R.drawable.dua_1);
                 break;
             } case 2:{
                 mTvIcon.setImageResource(R.drawable.dua_1);

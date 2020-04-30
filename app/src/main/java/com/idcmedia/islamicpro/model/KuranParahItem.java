@@ -4,6 +4,16 @@ public class KuranParahItem {
     private String english_name;
     private String arabic_name;
     private String url;
+    private String fileName;
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
     private int currentFileStatus;
     private String localFilePath;
     private int fileCount;

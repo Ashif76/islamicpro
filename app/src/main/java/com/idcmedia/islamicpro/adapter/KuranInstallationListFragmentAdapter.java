@@ -67,10 +67,10 @@ public class KuranInstallationListFragmentAdapter extends RecyclerView.Adapter<K
 
 
     private void setDownloadingView(ViewHolder holder, int position) {
-        holder.mTvTranslation.setText("Install Siparah "+(position+1));
+        holder.mTvTranslation.setText("Install para "+(position+1));
         holder.mTvArabic.setText("Download");
 //        holder.mTvExplanation.setText(mValues.get(position).getEnglishNameTranslation());
-        holder.mTvExplanation.setText(mValues.get(position).getEnglish_name());
+        holder.mTvExplanation.setText(mValues.get(position).getFileName());
         holder.mTvSurahNo.setText((position+1)+".");
         holder.tvReadingStatus.setVisibility(View.GONE);
 
@@ -83,19 +83,19 @@ public class KuranInstallationListFragmentAdapter extends RecyclerView.Adapter<K
     }
 
     private void setResumeView(ViewHolder holder, int position) {
-        holder.mTvTranslation.setText("Resume Siparah "+(position+1)+" Installation");
+        holder.mTvTranslation.setText("Resume para "+(position+1)+" Installation");
         holder.mTvArabic.setText("Resume");
 //        holder.mTvExplanation.setText(mValues.get(position).getEnglishNameTranslation());
-        holder.mTvExplanation.setText(mValues.get(position).getEnglish_name());
+        holder.mTvExplanation.setText(mValues.get(position).getFileName());
         holder.mTvSurahNo.setText((position+1)+".");
         holder.tvReadingStatus.setVisibility(View.GONE);
     }
 
     private void setReadingView(ViewHolder holder, int position) {
-        holder.mTvTranslation.setText("Siparah"+((position+1)));
+        holder.mTvTranslation.setText(mValues.get(position).getEnglish_name());
         holder.mTvArabic.setText(mValues.get(position).getArabic_name());
 //        holder.mTvExplanation.setText(mValues.get(position).getEnglishNameTranslation());
-        holder.mTvExplanation.setText(mValues.get(position).getEnglish_name());
+        holder.mTvExplanation.setText(mValues.get(position).getFileName());
         if(mValues.get(position).isReading()){
             holder.tvReadingStatus.setVisibility(View.VISIBLE);
         }else{
@@ -324,7 +324,7 @@ public class KuranInstallationListFragmentAdapter extends RecyclerView.Adapter<K
         progressdialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 
         progressdialog.setCancelable(false);
-        progressdialog.setMessage("Wait Installing Siprah "+msg+" .....");
+        progressdialog.setMessage("Wait Installing  "+msg+" .....");
 
         progressdialog.setMax(100);
 
