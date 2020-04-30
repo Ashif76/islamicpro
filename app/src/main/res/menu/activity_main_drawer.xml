@@ -23,7 +23,7 @@
         <item
             android:id="@+id/nav_notify"
             android:icon="@drawable/notification_48"
-            android:title="Notification" />
+            android:title="Daily Hadith" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"

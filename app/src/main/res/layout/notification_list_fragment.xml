@@ -14,7 +14,7 @@
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="You dont have any notification to display"
+        android:text="Don't have any hadith to display"
         android:visibility="gone"
         android:id="@+id/tv_no_itemfound"/>
 
