@@ -102,7 +102,7 @@ public class PdfRenderActivity extends AppCompatActivity {
         fullScreenListener();
         System.currentTimeMillis();
         if(currentValueToShowAdd ==1) {
-            Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
+//            Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
         }
 //         timerVideoAdd = Utils.setTimeForRewardedAdd(this, mRewardedVideoAd);
         Utils.loadAdd(adView);

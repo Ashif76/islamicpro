@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -27,9 +28,13 @@ public class KuranFullReadingMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_kuran);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        videoAddListener();
-        Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
+//        mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+//        videoAddListener();
+//        Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getResources().getString(R.string.page_intersial_add_id));
+//        fullScreenListener();
         if (savedInstanceState == null) {
              newFragment = KuranInstallationListFragment.newInstance(1);
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -87,24 +92,24 @@ public class KuranFullReadingMainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onResume() {
-        mRewardedVideoAd.resume(this);
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        mRewardedVideoAd.pause(this);
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        mRewardedVideoAd.destroy(this);
-        super.onDestroy();
-
-    }
+//    @Override
+//    protected void onResume() {
+//        mRewardedVideoAd.resume(this);
+//        super.onResume();
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        mRewardedVideoAd.pause(this);
+//        super.onPause();
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        mRewardedVideoAd.destroy(this);
+//        super.onDestroy();
+//
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -112,12 +117,14 @@ public class KuranFullReadingMainActivity extends AppCompatActivity {
             newFragment.onItemClick(null);
         }
 
-        Utils.showVideo(mRewardedVideoAd);
-        Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
+//        Utils.showVideo(mRewardedVideoAd);
+//        Utils.loadRewardedVideoAd(mRewardedVideoAd,this);
+        Utils.showFullScreen(mInterstitialAd);
+        Utils.loadInterstelFullScreenAdd(mInterstitialAd);
 
 
     }
-
+    private InterstitialAd mInterstitialAd;
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {

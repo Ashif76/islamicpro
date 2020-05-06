@@ -6,8 +6,8 @@ android {
         applicationId "com.idcmedia.islamicpro"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 20200430
-        versionName "2.0.0"
+        versionCode 20200504
+        versionName "2.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

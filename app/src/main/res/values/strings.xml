@@ -40,17 +40,26 @@
     <!--<string name="video_rewarded_add_id">ca-app-pub-4235942615050400/2402666823</string>-->
     <!--<string name="app_add_id">ca-app-pub-4235942615050400~4342434459</string>-->
 
-    <!--&lt;!&ndash; production latest ashif add ids&ndash;&gt;-->
+    <!-- production latest ashif add ids-->
     <!--<string name="banner_id">ca-app-pub-6882611079938933/8018665059</string>-->
     <!--<string name="page_intersial_add_id">ca-app-pub-6882611079938933/6096754859</string>-->
     <!--<string name="video_rewarded_add_id">ca-app-pub-6882611079938933/3075946676</string>-->
     <!--<string name="app_add_id">ca-app-pub-6882611079938933~5226262012</string>-->
 
     <!-- production latest of latest amir add ids-->
-    <string name="banner_id">ca-app-pub-2396266721068891/1131454351</string>
-    <string name="page_intersial_add_id">ca-app-pub-2396266721068891/8957973480</string>
+    <!--<string name="banner_id">ca-app-pub-2396266721068891/1131454351</string>-->
+    <!--<string name="page_intersial_add_id">ca-app-pub-2396266721068891/8957973480</string>-->
+    <!--<string name="video_rewarded_add_id">ca-app-pub-2396266721068891/1431655496</string>-->
+    <!--<string name="app_add_id">ca-app-pub-2396266721068891~2320891871</string>-->
+    <!---->
+
+   <!--nee idc media id islam plus-->
+    <string name="banner_id">ca-app-pub-6735322628702167/4885112822</string>
+    <string name="page_intersial_add_id">ca-app-pub-6735322628702167/6006622809</string>
     <string name="video_rewarded_add_id">ca-app-pub-2396266721068891/1431655496</string>
-    <string name="app_add_id">ca-app-pub-2396266721068891~2320891871</string>
+    <string name="app_add_id">ca-app-pub-6735322628702167~2450521176</string>
+
+
     <string name="title_location_permission">Allow location access to serve you better.</string>
     <string name="text_location_permission">Allow location access to serve you better</string>
     <string name="ok">Accept</string>
